@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý vật tư";
+}
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>QUẢN LÝ KHO</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class=" float-sm-right">
+                        <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Themvattu","Quanlyvattu")'">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+                        <button type="button" class="btn btn-info"><i class="fas fa-download"></i>Export</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+
+        <br />
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="container-fluid">
+
+                <div class="col-12">
+
+                    <!-- /.card -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Danh sách vật tư</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-hover">
+                                <thead style="background-color: darkgrey">
+                                    <tr>
+                                        <th>Tên vật tư</th>
+                                        <th>Mã vật tư</th>
+                                        <th>Loại</th>
+                                        <th>Ngày nhập</th>
+                                        <th>ĐVT</th>
+                                        <th>Tồn kho</th>
+                                        <th>Giá trị</th>
+                                        <th>Hoạt động</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Quạt trần</td>
+                                        <td>QT01</td>
+                                        <td>Phòng sinh viên</td>
+                                        <td>01/12/2019</td>
+                                        <td>cái</td>
+                                        <td>2</td>
+                                        <td>100 000</td>
+                                        <td align="center">
+                                            <a style="color:dodgerblue" href="Editvattu.html"><em class="far fa-eye"></em></a>
+                                            <a style="color:forestgreen" href="Editvattu.html"><em class="far fa-edit"></em></a>
+                                            <em style="color:red" class="far fa-trash-alt"></em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đèn huỳnh quang</td>
+                                        <td>DL01</td>
+                                        <td>Hành lang</td>
+                                        <td>01/12/2019</td>
+                                        <td>bóng</td>
+                                        <td>30</td>
+                                        <td>902 000</td>
+                                        <td align="center">
+                                            <a style="color:dodgerblue" href="Editvattu.html"><em class="far fa-eye"></em></a>
+                                            <a style="color:forestgreen" href="Editvattu.html"><em class="far fa-edit"></em></a>
+                                            <em style="color:red" class="far fa-trash-alt"></em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đèn huỳnh quang</td>
+                                        <td>DL02</td>
+                                        <td>Ti vi lầu</td>
+                                        <td>01/12/2019</td>
+                                        <td>bóng</td>
+                                        <td>40</td>
+                                        <td>902 000</td>
+                                        <td align="center">
+                                            <a style="color:dodgerblue" href="Editvattu.html"><em class="far fa-eye"></em></a>
+                                            <a style="color:forestgreen" href="Editvattu.html"><em class="far fa-edit"></em></a>
+                                            <em style="color:red" class="far fa-trash-alt"></em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đèn ống dài</td>
+                                        <td>DL03</td>
+                                        <td>Phòng sinh viên</td>
+                                        <td>01/12/2019</td>
+                                        <td>bóng</td>
+                                        <td>20</td>
+                                        <td>902 000</td>
+                                        <td align="center">
+                                            <a style="color:dodgerblue" href="Editvattu.html"><em class="far fa-eye"></em></a>
+                                            <a style="color:forestgreen" href="Editvattu.html"><em class="far fa-edit"></em></a>
+                                            <em style="color:red" class="far fa-trash-alt"></em>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Điều hòa</td>
+                                        <td>DH03</td>
+                                        <td>Phòng quản lý</td>
+                                        <td>01/12/2019</td>
+                                        <td>bóng</td>
+                                        <td>2</td>
+                                        <td>902 000</td>
+                                        <td align="center">
+                                            <a style="color:dodgerblue" href="Editvattu.html"><em class="far fa-eye"></em></a>
+                                            <a style="color:forestgreen" href="Editvattu.html"><em class="far fa-edit"></em></a>
+                                            <em style="color:red" class="far fa-trash-alt"></em>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+
+
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- Main Script -->
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+
+        });
+    </script>
+}

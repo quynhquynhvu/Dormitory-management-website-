@@ -1,0 +1,16 @@
+﻿<header id="hide-onscroll">
+    <div class="my-menu-icon">
+        <a href="javascript:void(0);" onclick="openMENU()"><i class="fa fa-bars"></i></a>
+    </div>
+    <div class="my-logo-section-wrap active">
+        <a href="@Url.Action("Index","Trangchu")"><img id="ueh-logo" src="~/assets/images/Logo.png" alt="UEH KTX Logo"></a>
+    </div>
+    <nav class="my-nor-nav">
+        <ul class="clearfix">
+            <li><a href="@Url.Action("Index","Trangchu")" data-content="TRANG CHỦ">TRANG CHỦ</a></li>
+            <li><a href="@Url.Action("Index","Sukien")" data-content="SỰ KIỆN">SỰ KIỆN</a></li>
+            <li><a href="@Url.Action("Index","Lienhe")" data-content="LIÊN HỆ">LIÊN HỆ</a></li>
+        </ul>
+        <button id="login-bt" onclick="location.href='@Url.Action("Login","Account")'">ĐĂNG NHẬP</button>
+    </nav>
+</header>

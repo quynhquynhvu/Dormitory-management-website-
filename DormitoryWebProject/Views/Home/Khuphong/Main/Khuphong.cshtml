@@ -1,0 +1,515 @@
+﻿@{
+    ViewBag.Title = "Khu phòng";
+}
+
+@section PageStyle{
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="~/assets/css/khuphong/Khu-Phong-So-do.css" rel="stylesheet" />
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2" style="margin-top:1em;">
+                <div class="col-sm-6">
+                    <h1>SƠ ĐỒ PHÒNG</h1>
+                    <br />
+                </div>
+
+                <div class="col-sm-6">
+                    <div class=" float-sm-right">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="width: 13em;">
+                            <i class="fas fa-search"></i>
+                            Tìm kiếm nâng cao
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Tìm kiếm Khu-Phòng</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Kí túc xá</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>Chọn KTX</option>
+                                            <option>KTX 135A Trần Hưng Đạo</option>
+                                            <option>KTX 43-45 Nguyễn Chí Thanh</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Tầng</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>Chọn Tầng</option>
+                                            <option name="tang">Tầng 1</option>
+                                            <option name="tang">Tầng 2</option>
+                                            <option name="tang">Tầng 3</option>
+                                            <option name="tang">Tầng 4</option>
+                                            <option name="tang">Tầng 5</option>
+                                            <option name="tang">Tầng 6</option>
+                                            <option name="tang">Tầng 7</option>
+                                            <option name="tang">Tầng 8</option>
+                                            <option name="tang">Tầng 9</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Loại phòng</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>Chọn loại phòng</option>
+                                            <option>Phòng Chất lượng cao</option>
+                                            <option>Phòng Thường</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Trạng thái phòng</th>
+                                    <td>
+                                        <label class="container" style="font-weight: normal;">
+                                            <input type="radio" checked="checked" name="radio">
+                                            <span class="checkmark">Tất cả</span>
+                                        </label>
+                                        <label class="container" style="font-weight: normal;">
+                                            <input type="radio" name="radio">
+                                            <span class="checkmark">Còn trống</span>
+                                        </label>
+                                        <label class="container" style="font-weight: normal;">
+                                            <input type="radio" name="radio">
+                                            <span class="checkmark">Hết chỗ</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+    </section>
+
+    <!-- sơ đồ - main -->
+    <section class="content">
+        <hr>
+        <div class="row" id="_row-loai1">
+            <div class="col-12 col-sm-12 col-md-12">
+                <div class="row">
+                    <!--bắt đầu phòng L101-->
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L101</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>8</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L101-->
+                    <!--bắt đầu phòng L102-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L102</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>2</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>6</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L102-->
+                    <!--bắt đầu phòng L103-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L103</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>1</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>7</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L103-->
+                    <!--bắt đầu phòng L104-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L104</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L104-->
+                    <!--bắt đầu phòng L105-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L105</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>2</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>6</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L105-->
+                    <!--bắt đầu phòng L106-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L106</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L106-->
+                    <!--bắt đầu phòng L107-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L107</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>3</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>5</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L107-->
+                    <!--bắt đầu phòng L108-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L108</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L108-->
+
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <!--phòng loại 2-->
+        <div class="row" id="_row-loai2">
+            <div class="col-12 col-sm-12 col-md-12">
+                <div class="row">
+                    <!--bắt đầu phòng L109-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L109</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L109-->
+                    <!--bắt đầu phòng L110-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L110</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>3</b></p>
+                                <p class="card-category">Tổng số sinh viên: 5</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L110-->
+                    <!--bắt đầu phòng L111-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L111</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L111-->
+                    <!--bắt đầu phòng L112-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L112</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L112-->
+                    <!--bắt đầu phòng L113-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L113</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L113-->
+                    <!--bắt đầu phòng L114-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L114</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>2</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>6</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L114-->
+                    <!--bắt đầu phòng L115-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L115</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>0</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>8</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Hết chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L115-->
+                    <!--bắt đầu phòng L116-->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-room" id="sdphong" style="background-color:#ADFF2F">
+                            <div class="card-header">
+                                <div class="card-name">
+                                    <p><a href="@Url.Action("Khuphongchitiet","Khuphong")">L116</a></p>
+                                </div>
+                                <div class="text-right" id="button-edit-save" style="float: right; margin-top:-3em;">
+                                    <button type="button" rel="tooltip" title="Chỉnh sửa" style="border:none; color: red; "><i class="fas fa-edit"></i></button>
+                                    <button type="button" rel="tooltip" title="Lưu" style="border:none; color: blue;"><i class="fas fa-save"></i></button>
+                                </div>
+                                <p class="card-category">Tổng số giường: <b>8</b></p>
+                                <p class="card-category">Tổng số giường trống: <b>2</b></p>
+                                <p class="card-category">Tổng số sinh viên: <b>6</b></p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Còn chỗ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--kết thúc phòng L116-->
+
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+    </section>
+</div>
+
+@section PageScript{
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+}

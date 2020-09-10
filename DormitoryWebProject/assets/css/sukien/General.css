@@ -1,0 +1,95 @@
+.main-section{
+	background-color: #FFFAEC !important;
+	max-height: 100%;
+	color: #004c56;
+}
+.main-section a {
+	color: #004C56;
+	text-decoration: none !important;
+}
+.main-section a:hover {
+	color: #F4841A;
+}
+.main-section .title{
+	font-weight: bold;
+}
+	.main-section .latestnews-decoration {
+		height: 10px;
+		width: 80px;
+		background-color: #004C56;
+	}
+	.main-section .bt-custom {
+		border-radius: 25px;
+	}
+	.main-section .latestnews-title {
+		border-top: 1px solid #004c56;
+	}
+	.main-section .latestnews-indicators {
+		width: 8px;
+		height: 8px;
+		background-color: #B0B5B5;
+		border-radius: 10px;
+		display: inline-block;
+		margin: 0.3em 0;
+	}
+	.main-section .latestnews-timestamp {
+		color: #004c56;
+		opacity: 0.6;
+		display: inline-block;
+		margin-left: 0.5em;
+		margin-bottom: 0;
+	}
+	.main-section .row:nth-child(3) {
+		margin-top: 2em;
+	}
+	.main-section .row:nth-child(2) {
+		padding-left: 1em;
+	}
+.main-section article .first-hr {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+	.main-section .my-pagination {
+		text-align: center;
+	}
+		.main-section .my-pagination li {
+			display: inline-block;
+			margin: 0 0.4em;
+		}
+		.main-section .my-pagination .choosen {
+			font-weight: bold;
+		}
+	.main-section .btn-default {
+		color: #F4841A;
+		background-color: #222830;
+	}
+	.main-section .form-control {
+		background-color: #FFFAEC;
+		color: black;
+	}
+.main-section form select, button {
+	margin-right: 0.6em;
+}
+	.main-section .form-container {
+		margin-top: 1em;
+	}
+		.main-section .form-container form select, button {
+			margin-bottom: 0.5em;
+		}
+/* Resposive design */
+/* Extremely small Device */
+@media (min-width: 320px) {
+	.main-section{
+		font-size: 12px;
+	}
+		.main-section .latestnews-indicators {
+			width: 4px;
+			height: 4px;
+		}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.main-section {
+		font-size: 14px;
+	}
+}

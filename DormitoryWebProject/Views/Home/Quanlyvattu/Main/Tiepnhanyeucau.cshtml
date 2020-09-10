@@ -1,0 +1,232 @@
+﻿
+@{
+    ViewBag.Title = "Tiếp nhận yêu cầu";
+}
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>TIẾP NHẬN YÊU CẦU SỬA CHỮA</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class=" float-sm-right">
+                        <button type="button" class="btn btn-info"><i class="fas fa-download"></i>Export</button>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="container-fluid">
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Yêu cầu sửa chữa mới</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Ngày gửi</th>
+                                        <th>Nhân viên tiếp nhận</th>
+                                        <th>Thông tin</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>11-7-2014</td>
+                                        <td>John Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Đang phê duyệt</option>
+                                                <option>Đang sửa chữa</option>
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <br />
+                    <!-- /.card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Danh sách sửa chữa</h3>
+
+                            <div class="card-tools">
+                                <div class="input-group input-group-sm" style="width: 150px;">
+                                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body table-responsive p-0" style="height: 300px;">
+                            <table class="table table-head-fixed text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Ngày gửi</th>
+                                        <th>Nhân viên tiếp nhận</th>
+                                        <th>Thông tin</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>11-7-2014</td>
+                                        <td>John Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Đang sửa chữa</option>
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>11-7-2014</td>
+                                        <td>Alexander Pierce</td>
+                                        <td>
+                                            <a href="CYC.html">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Đang sửa chữa</option>
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>11-7-2014</td>
+                                        <td>Bob Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Đang sửa chữa</option>
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>11-7-2014</td>
+                                        <td>Mike Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>11-7-2014</td>
+                                        <td>Jim Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>11-7-2014</td>
+                                        <td>Victoria Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>11-7-2014</td>
+                                        <td>Michael Doe</td>
+                                        <td>
+                                            <a href="@Url.Action("Chuyenyeucau","Quanlyvattu")">Xem chi tiết</a>
+                                        </td>
+                                        <td>
+                                            <select class="form-control">
+                                                <option>Hoàn tất</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+
+        });
+    </script>
+}

@@ -1,0 +1,488 @@
+﻿@using DormitoryWebProject.Models
+@model  DormitoryWebProject.ViewModels.ThongtinphongViewModel
+@{ ViewBag.Title = "Khu phòng chi tiết"; }
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!--css Khu-Phong-Chi-tiet-->
+    <link href="~/assets/css/khuphong/Khu-Phong-Chi-tiet.css" rel="stylesheet" />
+}
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- Main Script -->
+    <script>
+        $(function () {
+            $('#tablephong').DataTable({
+                "paging": false,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $("#tablesv").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+                "info": false,
+                "paging": false,
+            });
+
+        });</script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+}
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>CHI TIẾT PHÒNG</h1>
+                    <br />
+                </div>
+
+                <div class="col-sm-6">
+                    <div class=" float-sm-right">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="width: 13em;">
+                            <i class="fas fa-search"></i>
+                            Tìm kiếm nâng cao
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="ModalLabel">Tìm kiếm Chi tiết phòng ở</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Kí túc xá</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>Chọn KTX</option>
+                                            <option>KTX 135A Trần Hưng Đạo</option>
+                                            <option>KTX 43-45 Nguyễn Chí Thanh</option>>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Tầng</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>Chọn Tầng</option>
+                                            <option name="tang">Tầng 1</option>
+                                            <option name="tang">Tầng 2</option>
+                                            <option name="tang">Tầng 3</option>
+                                            <option name="tang">Tầng 4</option>
+                                            <option name="tang">Tầng 5</option>
+                                            <option name="tang">Tầng 6</option>
+                                            <option name="tang">Tầng 7</option>
+                                            <option name="tang">Tầng 8</option>
+                                            <option name="tang">Tầng 9</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Phòng</th>
+                                    <td>
+                                        <select class="form-control">
+                                            <option>Chọn Phòng</option>
+                                            <div id="phongl1">
+                                                <option name="phongl1">L101</option>
+                                                <option name="phongl1">L102</option>
+                                                <option name="phongl1">L103</option>
+                                                <option name="phongl1">L104</option>
+                                                <option name="phongl1">L105</option>
+                                                <option name="phongl1">L106</option>
+                                                <option name="phongl1">L107</option>
+                                                <option name="phongl1">L108</option>
+                                                <option name="phongl1">L109</option>
+                                                <option name="phongl1">L110</option>
+                                                <option name="phongl1">L111</option>
+                                                <option name="phongl1">L112</option>
+                                                <option name="phongl1">L113</option>
+                                                <option name="phongl1">L114</option>
+                                                <option name="phongl1">L115</option>
+                                                <option name="phongl1">L116</option>
+                                            </div>
+                                            <div id="phongl2">
+                                                <option name="phongl2">L201</option>
+                                                <option name="phongl2">L202</option>
+                                                <option name="phongl2">L203</option>
+                                                <option name="phongl2">L204</option>
+                                                <option name="phongl2">L205</option>
+                                                <option name="phongl2">L206</option>
+                                                <option name="phongl2">L207</option>
+                                                <option name="phongl2">L208</option>
+                                                <option name="phongl2">L209</option>
+                                                <option name="phongl2">L210</option>
+                                                <option name="phongl2">L211</option>
+                                                <option name="phongl2">L212</option>
+                                                <option name="phongl1">L213</option>
+                                                <option name="phongl1">L214</option>
+                                                <option name="phongl1">L215</option>
+                                                <option name="phongl1">L216</option>
+                                            </div>
+                                            <div id="phongl3">
+                                                <option name="phongl3">L301</option>
+                                                <option name="phongl3">L302</option>
+                                                <option name="phongl3">L303</option>
+                                                <option name="phongl3">L304</option>
+                                                <option name="phongl3">L305</option>
+                                                <option name="phongl3">L306</option>
+                                                <option name="phongl3">L307</option>
+                                                <option name="phongl3">L308</option>
+                                                <option name="phongl3">L309</option>
+                                                <option name="phongl3">L310</option>
+                                                <option name="phongl3">L311</option>
+                                                <option name="phongl3">L312</option>
+                                                <option name="phongl1">L313</option>
+                                                <option name="phongl1">L314</option>
+                                                <option name="phongl1">L315</option>
+                                                <option name="phongl1">L316</option>
+                                            </div>
+                                            <div id="phongl4">
+                                                <option name="phongl4">L401</option>
+                                                <option name="phongl4">L402</option>
+                                                <option name="phongl4">L403</option>
+                                                <option name="phongl4">L404</option>
+                                                <option name="phongl4">L405</option>
+                                                <option name="phongl4">L406</option>
+                                                <option name="phongl4">L407</option>
+                                                <option name="phongl4">L408</option>
+                                                <option name="phongl4">L409</option>
+                                                <option name="phongl4">L410</option>
+                                                <option name="phongl4">L411</option>
+                                                <option name="phongl4">L412</option>
+                                                <option name="phongl1">L413</option>
+                                                <option name="phongl1">L414</option>
+                                                <option name="phongl1">L415</option>
+                                                <option name="phongl1">L416</option>
+                                            </div>
+                                            <div id="phongl5">
+                                                <option name="phongl5">L501</option>
+                                                <option name="phongl5">L502</option>
+                                                <option name="phongl5">L503</option>
+                                                <option name="phongl5">L504</option>
+                                                <option name="phongl5">L505</option>
+                                                <option name="phongl5">L506</option>
+                                                <option name="phongl5">L507</option>
+                                                <option name="phongl5">L508</option>
+                                                <option name="phongl5">L509</option>
+                                                <option name="phongl5">L510</option>
+                                                <option name="phongl5">L511</option>
+                                                <option name="phongl5">L512</option>
+                                                <option name="phongl1">L513</option>
+                                                <option name="phongl1">L514</option>
+                                                <option name="phongl1">L515</option>
+                                                <option name="phongl1">L516</option>
+                                            </div>
+                                            <div id="phongl6">
+                                                <option name="phongl6">L601</option>
+                                                <option name="phongl6">L602</option>
+                                                <option name="phongl6">L603</option>
+                                                <option name="phongl6">L604</option>
+                                                <option name="phongl6">L605</option>
+                                                <option name="phongl6">L606</option>
+                                                <option name="phongl6">L607</option>
+                                                <option name="phongl6">L608</option>
+                                                <option name="phongl6">L609</option>
+                                                <option name="phongl6">L610</option>
+                                                <option name="phongl6">L611</option>
+                                                <option name="phongl6">L612</option>
+                                                <option name="phongl1">L613</option>
+                                                <option name="phongl1">L614</option>
+                                                <option name="phongl1">L615</option>
+                                                <option name="phongl1">L616</option>
+                                            </div>
+                                            <div id="phongl7">
+                                                <option name="phongl2">L701</option>
+                                                <option name="phongl2">L702</option>
+                                                <option name="phongl2">L703</option>
+                                                <option name="phongl2">L704</option>
+                                                <option name="phongl2">L705</option>
+                                                <option name="phongl2">L706</option>
+                                                <option name="phongl2">L707</option>
+                                                <option name="phongl2">L708</option>
+                                                <option name="phongl2">L709</option>
+                                                <option name="phongl2">L710</option>
+                                                <option name="phongl2">L711</option>
+                                                <option name="phongl2">L712</option>
+                                                <option name="phongl1">L713</option>
+                                                <option name="phongl1">L714</option>
+                                                <option name="phongl1">L715</option>
+                                                <option name="phongl1">L716</option>
+                                            </div>
+                                            <div id="phongl8">
+                                                <option name="phongl2">L801</option>
+                                                <option name="phongl2">L802</option>
+                                                <option name="phongl2">L803</option>
+                                                <option name="phongl2">L804</option>
+                                                <option name="phongl2">L805</option>
+                                                <option name="phongl2">L806</option>
+                                                <option name="phongl2">L807</option>
+                                                <option name="phongl2">L808</option>
+                                                <option name="phongl2">L809</option>
+                                                <option name="phongl2">L810</option>
+                                                <option name="phongl2">L811</option>
+                                                <option name="phongl2">L812</option>
+                                                <option name="phongl1">L813</option>
+                                                <option name="phongl1">L814</option>
+                                                <option name="phongl1">L815</option>
+                                                <option name="phongl1">L816</option>
+                                            </div>
+                                            <div id="phongl9">
+                                                <option name="phongl2">L901</option>
+                                                <option name="phongl2">L902</option>
+                                                <option name="phongl2">L903</option>
+                                                <option name="phongl2">L904</option>
+                                                <option name="phongl2">L905</option>
+                                                <option name="phongl2">L906</option>
+                                                <option name="phongl2">L907</option>
+                                                <option name="phongl2">L908</option>
+                                                <option name="phongl2">L909</option>
+                                                <option name="phongl2">L910</option>
+                                                <option name="phongl2">L911</option>
+                                                <option name="phongl2">L912</option>
+                                                <option name="phongl1">L913</option>
+                                                <option name="phongl1">L914</option>
+                                                <option name="phongl1">L915</option>
+                                                <option name="phongl1">L916</option>
+                                            </div>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12 col-12">
+                <div class=" float-sm-left float-left" style="margin:0 0.7em 1em 0.7em;">
+                    <button type="button" class="btn btn-info" onclick="location.href='@Url.Action("Khuphong","Home")'"><i class="fas fa-arrow-circle-left"></i> Trở về</button>
+                </div>
+
+                <div class=" float-sm-right float-right" style="margin-left: 0.7em;margin-right:0.7em;">
+                    <button type="button" class="btn btn-info"><i class="fas fa-download"></i> Download</button>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title" style="padding:1em;">Thông tin phòng </h3>
+                            <br />
+                            <div class=" float-right">
+                                <!-- Button trigger modal -->
+                                <div style="margin-top:-0.8em;">
+                                    <button type="button" class="btn btn-success" id="htmlact"><i class="fas fa-plus"> @Html.ActionLink(" Tạo mới", "Create")</i></button>
+                                    <style>
+                                        #htmlact a {
+                                            color: white;
+                                            text-decoration: none;
+                                            font-size: 15px;
+                                        }
+
+                                            #htmlact a:hover {
+                                                color: yellow;
+                                            }
+                                    </style>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="container-fluid">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <!-- /.card-header -->
+                                        <div class="card-body">
+                                            <table id="tablephong" class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phòng</th>
+                                                        <th>Tầng</th>
+                                                        <th>Loại</th>
+                                                        <th>SLSV</th>
+                                                        <th>Kí túc xá</th>
+                                                        <th>TS Giường</th>
+                                                        <th>TS Giường Trống</th>
+                                                        <th>Cơ sở vật chất</th>
+                                                        <th>Hoạt động</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        @foreach (var item in Model.LISTPhong)
+                                                        {
+                                                            <td>@item.TenPhong</td>
+                                                        }
+
+                                                        @foreach (var item in Model.LISTTang)
+                                                        {
+                                                            <td>@item.Ten</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTLoai)
+                                                        {
+                                                            <td>@item.TenLoai</td>
+                                                        }
+                                                        <td>@Model.soluongsinhvien</td>
+                                                        @foreach (var item in Model.LISTKTX)
+                                                        {
+                                                            <td>@item.TenKTX</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTPhong)
+                                                        {
+                                                            <td>@item.TongSoGiuong</td>
+                                                        }
+                                                        <td>Tổng số giường trống</td>
+                                                        @foreach (var item in Model.LISTPhong)
+                                                        {
+                                                            <td>@item.CoSoVatChat</td>
+                                                        }
+                                                        <td>
+                                                            <a class="btn btn-link">
+                                                                <p>
+                                                                    @Html.ActionLink(" Detail", "", new { @class = "far fa-eye" })
+                                                                </p>
+                                                                <a style="color:dodgerblue" href="#xemchitietsinhvien"><em class="far fa-eye">@Html.ActionLink("Detail", "")</em></a>
+                                                                <a style="color:forestgreen" href="#editthongtin"><em class="far fa-edit">@Html.ActionLink("Edit", "Edit")</em></a>
+                                                                <em style="color:red" class="far fa-trash-alt"></em>
+                                                            </a>
+                                                        </td>
+
+                                                    </tr>
+                                            </table>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <!-- /.card -->
+                                    <div class="card">
+                                        <!-- /.card-header -->
+                                        <div class="card-header">
+                                            <h3 class="card-title" style="padding:1em;">Danh sách sinh viên</h3>
+                                            <br />
+                                            <div class=" float-right">
+                                                <!-- Button trigger modal -->
+                                                <div style="margin-top:-0.8em;">
+                                                    <button type="button" class="btn btn-success" id="htmlact"><i class="fas fa-plus"> @Html.ActionLink(" Tạo mới", "Create")</i></button>
+                                                    <style>
+                                                        #htmlact a {
+                                                            color: white;
+                                                            text-decoration: none;
+                                                            font-size: 15px;
+                                                        }
+
+                                                            #htmlact a:hover {
+                                                                color: yellow;
+                                                            }
+                                                    </style>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <table id="tablesv" class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Mã sinh viên</th>
+                                                        <th>Tên sinh viên</th>
+                                                        <th>Khóa</th>
+                                                        <th>Giới tính</th>
+                                                        <th>Ngày vào</th>
+                                                        <th>Số điện thoại</th>
+                                                        <th>Chức vụ</th>
+                                                        <th>Hoạt động</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        @foreach (var item in Model.LISTSinhVien)
+                                                        {
+                                                            <td>@item.MSSV</td>
+                                                            <td>@item.TenSV</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTKhoa)
+                                                        {
+                                                            <td>@item.TenKhoaHoc</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTSinhVien)
+                                                        {
+                                                            <td>@item.GioiTinh</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTChiTietPhong)
+                                                        {
+                                                            <td>@item.NgayVao</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTSinhVien)
+                                                        {
+                                                            <td>@item.SDT</td>
+                                                        }
+                                                        @foreach (var item in Model.LISTChucVu)
+                                                        {
+                                                            <td>@item.TenChucVu</td>
+                                                        }
+                                                        <td>
+                                                            <a class="btn btn-link">
+                                                                <a style="color:dodgerblue" href="#xemchitietsinhvien"><em class="far fa-eye"></em></a>
+                                                                <a style="color:forestgreen" href="#editthongtin"><em class="far fa-edit"></em></a>
+                                                                <em style="color:red" class="far fa-trash-alt"></em>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                            </table>
+                                        </div>
+                                        <!-- /.card-body -->
+                                    </div>
+                                    <!-- /.card -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- /.content-wrapper -->

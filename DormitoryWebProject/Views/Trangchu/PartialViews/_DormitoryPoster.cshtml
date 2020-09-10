@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DormitoryWebProject.Models.Poster>
+<div id="mycarousel" class="first-carousel carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    @{
+        int count = 0;
+        foreach (var item in Model) { count++; }
+        if (count <= 3)
+        {
+            <ol class="carousel-indicators hidden-xs">
+                @{
+                    for (int i = 0; i < count; i++)
+                    {
+                        <li data-target="#mycarousel" data-slide-to="@i" class="active"></li>
+                    }
+                }
+            </ol>
+        }
+        else { }
+    }
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        @{
+            string active;
+            count = 0;
+            foreach (var item in Model)
+            {
+                count++;
+                if (count == 1) { active = "active"; } else { active = ""; }
+                <div class="item @active">
+                    <img class="img-custom-fullwidth" src="@item.picturePath" alt="@item.Caption">
+                    <div class="carousel-caption">
+                        <h1 class="visible-md visible-lg">@item.Caption</h1>
+                        <h3 class="visible-sm">@item.Caption</h3>
+                        <h6 class="visible-xs">@item.Caption</h6>
+
+                        <button type="button" class="btn btn-xs btn-default visible-xs-inline-block"
+                                onclick="location.href='@Url.Action("Datcho", "Lienhe")'">
+                            LIÊN HỆ NGAY
+                        </button>
+
+                        <button type="button" class="btn btn-sm btn-default visible-sm-inline-block"
+                                onclick="location.href='@Url.Action("Datcho", "Lienhe")'">
+                            LIÊN HỆ NGAY
+                        </button>
+
+                        <button type="button" class="btn btn-lg btn-default visible-md-inline-block visible-lg-inline-block"
+                                onclick="location.href='@Url.Action("Datcho", "Lienhe")'">
+                            LIÊN HỆ NGAY
+                        </button>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

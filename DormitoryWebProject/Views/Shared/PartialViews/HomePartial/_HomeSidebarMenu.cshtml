@@ -1,0 +1,170 @@
+﻿<nav class="mt-2 accent-yellow">
+    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent nav-flat nav-collapse-hide-child" data-widget="treeview" role="menu" data-accordion="true" data-animation-speed="200">
+        <!-- Dasboard -->
+        <li class="nav-item">
+            <a href="@Url.Action("Dashboard","Dashboard")" class="nav-link @ViewData["aDB"]">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                    Dashboard
+                </p>
+            </a>
+        </li>
+
+        <!-- Người dùng -->
+        <li class="nav-item">
+            <a href="#" class="nav-link @ViewData["aND"]">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                    <i class="right fas fa-angle-left"></i>
+                    Người dùng
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="@Url.Action("Thongtinnguoidung","Nguoidung")" class="nav-link @ViewData["aTTND"]">
+                        <p>Thông tin người dùng</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Quanlynguoidung","Nguoidung")" class="nav-link @ViewData["aQLND"]">
+                        <p>Quản lý người dùng</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Quanlynhomnguoidung","Nguoidung")" class="nav-link @ViewData["aQLNND"]">
+                        <p>Quản lý nhóm người dùng</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Sinh viên -->
+        <li class="nav-item has-treeview">
+            <a href="@Url.Action("Hososinhvien","Sinhvien")" class="nav-link @ViewData["aSV"]">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                    Sinh Viên
+                </p>
+            </a>           
+        </li>
+
+        <!-- Khu/phong -->
+        <li class="nav-item has-treeview">
+            <a href="@Url.Action("Khuphong","Khuphong")" class="nav-link @ViewData["aKP"]">
+                <i class="nav-icon fas fa-hotel"></i>
+                <p>
+                    Khu/Phòng
+                </p>
+            </a>
+        </li>
+
+        <!-- Hoadon -->
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link @ViewData["aHD"]">
+                <i class="nav-icon fas fa-file-invoice-dollar"></i>
+                <p>
+                    Hóa đơn
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="@Url.Action("Hoadonlephi","Hoadon")" class="nav-link @ViewData["aHDLP"]">
+                        <p>Hóa đơn - Lệ phí</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Hoadondiennuoc","Hoadon")" class="nav-link @ViewData["aHDDN"]">
+                        <p>Hóa đơn điện nước</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- QLVT -->
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link @ViewData["aQLVT"]">
+                <i class="nav-icon fas fa-pallet"></i>
+                <p>
+                    Quản lý vật tư
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="@Url.Action("Quanlykho","Quanlyvattu")" class="nav-link @ViewData["aQLK"]">
+                        <p>Quản lý kho</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Tiepnhanyeucau","Quanlyvattu")" class="nav-link @ViewData["aTNYC"]">
+                        <p>Tiếp nhận yêu cầu</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Yeu cau sua chua -->
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link @ViewData["aYCSC"]">
+                <i class="nav-icon fas fa-tools"></i>
+                <p>
+                    Yêu cầu sửa chữa
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="@Url.Action("Danhsachsuachua","Yeucausuachua")" class="nav-link @ViewData["aDSSC"]">
+                        <p>Danh sách sửa chữa</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Chuyenyeucau","Yeucausuachua")" class="nav-link @ViewData["aCYC"]">
+                        <p>Chuyển yêu cầu</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <!-- Quản lý giặt ủi -->
+        <li class="nav-item has-treeview">
+            <a href="@Url.Action("Danhsachgiatui","Quanlygiatui")" class="nav-link @ViewData["aQLGU"]">
+                <i class="nav-icon fas fa-hands-wash"></i>
+                <p>
+                    Quản lý giặt ủi
+                </p>
+            </a>
+        </li>
+
+        <!-- Bao cao thong ke -->
+        <li class="nav-item">
+            <a href="@Url.Action("Baocaothongke","Baocaothongke")" class="nav-link @ViewData["aBCTC"]">
+                <i class="nav-icon far fa-chart-bar"></i>
+                <p>
+                    Báo cáo thống kê
+                </p>
+            </a>
+        </li>
+
+        <!-- Content Management System -->
+        <li class="nav-item">
+            <a href="@Url.Action("Index","CMS")" class="nav-link @ViewData["aCMS"]">
+                <i class="nav-icon fas fa-tools"></i>
+                <p>
+                    CMS
+                </p>
+            </a>
+        </li>
+
+        <!-- Dang xuat -->
+        <li class="nav-item has-treeview">
+            <a href="@Url.Action("Login","Account")" class="nav-link">
+                <i class="nav-icon fas fa-sign-out-alt"></i>
+                <p>
+                    Đăng xuất
+                </p>
+            </a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,64 @@
+body{
+	background-color: #FFFAEC !important;
+	max-height: 100%;
+	padding: 0;
+}
+.title{
+	font-weight: bold;
+	color: #004C56;
+}
+.breadcrumb{
+	background-color: transparent;
+	border-bottom: 0.5px solid #F4841A;
+	margin-bottom: 10px;
+}
+.breadcrumb a{
+	color: #004C56;
+}
+.col-custom{
+	padding: 0;
+	margin: 2em;
+}
+.col-custom .row{
+	margin-bottom: 2em;
+}
+.row{
+	margin: 0;
+}
+
+
+/* Responsive Design */
+
+/* Extremely small Device */
+@media (min-width: 320px) { 
+	body{
+		font-size: 9px;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	body{
+		font-size: 14px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	body{
+		font-size: 14px;
+	}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
+/*Extremely Large devices (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+
+}
+/*4K Screen devices (large desktops, 1440px and up) */
+@media (min-width: 2500px) { 
+
+}

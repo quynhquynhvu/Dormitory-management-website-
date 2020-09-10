@@ -1,0 +1,217 @@
+﻿
+@{
+    ViewBag.Title = "Danh sách yêu cầu sửa chữa";
+}
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!--css Khu-Phong-Chi-tiet-->
+    <link href="~/assets/css/khuphong/Khu-Phong-Chi-tiet.css" rel="stylesheet" />
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>YÊU CẦU SỬA CHỮA</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class=" float-sm-right">
+                        <button type="button" class="btn btn-success" onclick="location.href='@Url.Action("Themyeucau","Yeucausuachua")'">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+                        <button type="button" class="btn btn-info"><i class="fas fa-download"></i>Export</button>
+                    </div>
+                </div>
+            </div>                <br />
+
+        </div><!-- /.container-fluid -->
+
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="container-fluid">
+
+                <div class="col-12">
+
+                    <!-- /.card -->
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">DANH SÁCH YÊU CẦU SỬA CHỮA</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-hover">
+                                <thead style="background-color: darkgrey">
+                                    <tr>
+                                        <th>
+                                        </th>
+                                        <th>Ngày gửi yêu cầu</th>
+                                        <th>Mã yêu cầu</th>
+                                        <th>Tên người gửi</th>
+                                        <th>MSSV</th>
+                                        <th>Phòng</th>
+                                        <th>KTX</th>
+                                        <th>Nội dung</th>
+                                        <th>Trạng thái</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="CYC.html">Chuyển yêu cầu</a>
+                                                    <a class="dropdown-item" href="Addyeucau.html">Chỉnh sửa</a>
+                                                    <a class="dropdown-item" href="#">Xóa</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>01/12/2019</td>
+                                        <td>M0001</td>
+                                        <td>Hà Hương</td>
+                                        <td>31161021567</td>
+                                        <td>204</td>
+                                        <td>135THĐ</td>
+                                        <td>Quạt bị gãy cánh</td>
+                                        <td align="center" style="color:orange">
+                                            Mới
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="CYC.html">Chuyển yêu cầu</a>
+                                                    <a class="dropdown-item" href="Addyeucau.html">Chỉnh sửa</a>
+                                                    <a class="dropdown-item" href="#">Xóa</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>01/12/2019</td>
+                                        <td>M0001</td>
+                                        <td>Hà Hương</td>
+                                        <td>31161021567</td>
+                                        <td>204</td>
+                                        <td>135THĐ</td>
+                                        <td>Quạt bị gãy cánh</td>
+                                        <td align="center" style="color:orange">
+                                            Mới
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="CYC.html">Chuyển yêu cầu</a>
+                                                    <a class="dropdown-item" href="Addyeucau.html">Chỉnh sửa</a>
+                                                    <a class="dropdown-item" href="#">Xóa</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>01/12/2019</td>
+                                        <td>M0001</td>
+                                        <td>Hà Hương</td>
+                                        <td>31161021567</td>
+                                        <td>204</td>
+                                        <td>135THĐ</td>
+                                        <td>Quạt bị gãy cánh</td>
+                                        <td align="center" style="color:orange">
+                                            Mới
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="CYC.html">Chuyển yêu cầu</a>
+                                                    <a class="dropdown-item" href="Addyeucau.html">Chỉnh sửa</a>
+                                                    <a class="dropdown-item" href="#">Xóa</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>01/12/2019</td>
+                                        <td>M0001</td>
+                                        <td>Hà Hương</td>
+                                        <td>31161021567</td>
+                                        <td>204</td>
+                                        <td>135THĐ</td>
+                                        <td>Quạt bị gãy cánh</td>
+                                        <td align="center" style="color:orange">
+                                            Mới
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" href="CYC.html">Chuyển yêu cầu</a>
+                                                    <a class="dropdown-item" href="Addyeucau.html">Chỉnh sửa</a>
+                                                    <a class="dropdown-item" href="#">Xóa</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>01/12/2019</td>
+                                        <td>M0001</td>
+                                        <td>Hà Hương</td>
+                                        <td>31161021567</td>
+                                        <td>204</td>
+                                        <td>135THĐ</td>
+                                        <td>Quạt bị gãy cánh</td>
+                                        <td align="center" style="color:orange">
+                                            Mới
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+
+        });
+    </script>
+}
+

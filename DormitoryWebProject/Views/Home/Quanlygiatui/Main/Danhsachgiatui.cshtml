@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "Quản lý giặt ủi";
+}
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Danh sách giặt ủi</h1>
+                </div>
+                <div class="col-sm-6">
+                    <div class=" float-sm-right">
+                        <a href="@Url.Action("Taophieugiatui","Home")" class="btn btn-success"><i class="fas fa-plus"></i> Add</a>
+                        <button type="button" class="btn btn-info"><i class="fas fa-download"></i> Export</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+    </section>
+
+
+    <!-- Main content -->
+    <div class="content">
+        <section class="row">
+            <div class="container-fluid">
+
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>KTX</th>
+                                        <th>MSSV</th>
+                                        <th>Tên sinh viên</th>
+                                        <th>Ngày nhận đồ</th>
+                                        <th>Ngày trả đồ</th>
+                                        <th>Số lượng</th>
+                                        <th>Đơn giá</th>
+                                        <th>Thành tiền</th>
+                                        <th>Trạng thái</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>20191201</td>
+                                        <td>135A</td>
+                                        <td>31171022984</td>
+                                        <td>Ngô Phương Thảo Nguyên</td>
+                                        <td>01/12/2019 9:00AM</td>
+                                        <td></td>
+                                        <td>2</td>
+                                        <td>10,000</td>
+                                        <td>20,000</td>
+                                        <td>Đã giao đồ</td>
+                                        <td>
+                                            <a style="color:forestgreen" href="#"><em class="far fa-edit"></em></a>
+                                            <a style="color:red" class="far fa-trash-alt"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>20191202</td>
+                                        <td>135A</td>
+                                        <td>31171022975</td>
+                                        <td>Trần Nguyễn Nhật Linh</td>
+                                        <td>01/12/2019 1:00PM</td>
+                                        <td></td>
+                                        <td>3</td>
+                                        <td>10,000</td>
+                                        <td>30,000</td>
+                                        <td>Đã giao đồ</td>
+                                        <td>
+                                            <a style="color:forestgreen" href="#"><em class="far fa-edit"></em></a>
+                                            <a style="color:red" class="far fa-trash-alt"></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>20191203</td>
+                                        <td>135A</td>
+                                        <td>31171022976</td>
+                                        <td>Trần Quang Mai Linh</td>
+                                        <td>02/12/2019 8:00AM</td>
+                                        <td></td>
+                                        <td>4</td>
+                                        <td>10,000</td>
+                                        <td>40,000</td>
+                                        <td>Đã giao đồ</td>
+                                        <td>
+                                            <a style="color:forestgreen" href="#"><em class="far fa-edit"></em></a>
+                                            <a style="color:red" class="far fa-trash-alt"></a>
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+</div>
+
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+            $('#dtBasicExample').mdbEditor({
+                mdbEditor: true
+            });
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+}

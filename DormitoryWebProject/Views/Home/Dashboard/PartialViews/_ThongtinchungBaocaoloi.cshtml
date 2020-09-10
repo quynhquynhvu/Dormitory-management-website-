@@ -1,0 +1,60 @@
+﻿
+<div class="modal fade" id="modal-report-bug">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Báo cáo lỗi</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="problem-name">Tên vấn đề</label>
+                    <input type="email" class="form-control" id="problem-name" placeholder="vui lòng nhập tên vấn đề của bạn">
+                </div>
+                <div class="form-group">
+                    <label>Màn hình bị lỗi</label>
+                    <select class="form-control select2bs4" style="width: 100%;">
+                        <option value="">Dashboard</option>
+                        <option value="">Quản lý người dùng</option>
+                        <option value="">Quản lý nhóm người dùng</option>
+                        <option value="">Tìm hồ sơ sinh viên</option>
+                        <option value="">Thêm sinh viên</option>
+                        <option value="">Download danh sách sinh viên</option>
+                        <option value="">Khu/Phòng</option>
+                        <option value="">Hóa đơn - lệ phí</option>
+                        <option value="">Hóa đơn điện nước</option>
+                        <option value="">Quản lý kho</option>
+                        <option value="">Tiếp nhận yêu cầu</option>
+                        <option value="">Danh sách sửa chữa</option>
+                        <option value="">Chuyển yêu cầu</option>
+                        <option value="">Quản lý giặt ủi</option>
+                        <option value="">Báo cáo thống kê</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description-problem">Mô tả vấn đề</label>
+                    <textarea id="description-problem" placeholder="Vui lòng mô tả vấn đề của bạn..." rows="5" class="col-12"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="upload-problem-image">Tệp đính kèm</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="upload-problem-image">
+                            <label class="custom-file-label" for="upload-problem-image">Tải tệp từ máy tính...</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-success swalDefaultSuccess">
+                    Submit
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

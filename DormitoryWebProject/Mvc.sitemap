@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Dashboard" action="Dashboard">
+
+   <!--Người dùng-->
+    <mvcSiteMapNode title="Người dùng" controller="Nguoidung" action="Thongtinnguoidung">
+      <mvcSiteMapNode title="Quản lý người dùng" controller="Nguoidung" action="Quanlynguoidung">
+        <mvcSiteMapNode title="Thêm người dùng" controller="Nguoidung" action="Themnguoidung"/>
+      </mvcSiteMapNode>
+      <mvcSiteMapNode title="Quản lý nhóm người dùng" controller="Nguoidung" action="Quanlynhomnguoidung">
+        <mvcSiteMapNode title="Thêm nhóm người dùng" controller="Nguoidung" action="Themnhomnguoidung"/>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+   <!--Sinh viên-->
+    <mvcSiteMapNode title="Sinh viên" controller="Sinhvien"  action="Timhososinhvien">
+      <mvcSiteMapNode title="Thông tin sinh viên chi tiết" controller="Sinhvien"  action="Thongtinsinhvien"/>
+      <mvcSiteMapNode title="Thêm sinh viên" controller="Sinhvien"  action="Themsinhvien"/>
+      <mvcSiteMapNode title="Download danh sách sinh viên" controller="Sinhvien"  action="Downloaddanhsach"/>
+    </mvcSiteMapNode>
+
+    <!--Khu phòng-->
+    <mvcSiteMapNode title="Khu/ Phòng" controller="Khuphong" action="Khuphong">
+      <mvcSiteMapNode title="Khu/ Phòng chi tiết" controller="Khuphong" action="Khuphongchitiet"/>
+    </mvcSiteMapNode>
+
+    <!--Hóa đơn-->
+    <mvcSiteMapNode title="Hóa đơn lệ phí" controller="Hoadon" action="Hoadonlephi"/>
+    <mvcSiteMapNode title="Hóa đơn điện nước" controller="Hoadon" action="Hoadondiennuoc"/>
+
+    <!--Quản lý vật tư-->
+    <mvcSiteMapNode title="Quản lý vật tư" controller="Quanlyvattu" action="Quanlykho">
+      <mvcSiteMapNode title="Thêm vật tư" controller="Quanlyvattu" action="Themvattu"/>
+      <mvcSiteMapNode title="Tiếp nhận yêu cầu" controller="Quanlyvattu" action="Tiepnhanyeucau"/>
+    </mvcSiteMapNode>
+
+    <!--Yêu cầu sửa chữa-->
+    <mvcSiteMapNode title="Yêu cầu sửa chữa" controller="Yeucausuachua" action="Danhsachsuachua">
+      <mvcSiteMapNode title="Thêm yêu cầu sửa chữa" controller="Yeucausuachua" action="Themyeucau"/>
+      <mvcSiteMapNode title="Chuyển yêu cầu sửa chữa" controller="Yeucausuachua" action="Chuyenyeucau"/>
+    </mvcSiteMapNode>
+
+    <!--Quản lý giặt ủi-->
+    <mvcSiteMapNode title="Quản lý giặt ủi" controller="Quanlygiatui" action="Danhsachgiatui">
+      <mvcSiteMapNode title="Tạo phiếu giặt ủi" controller="Quanlygiatui" action="Taophieugiatui"/>
+    </mvcSiteMapNode>
+
+    <!--Báo cáo thống kê-->
+    <mvcSiteMapNode title="Báo cáo thống kê" controller="Baocaothongke" action="Baocaothongke"/>
+
+    <!--Module CMS-->
+    <mvcSiteMapNode title="CMS" controller="CMS" action="Index">
+      
+      <!--Poster-->
+      <mvcSiteMapNode title="Dormitory Poster" controller="Poster" action="Index">
+        <mvcSiteMapNode title="Tạo Poster" controller="Poster" action="Create"/>
+        <mvcSiteMapNode title="Chi tiết Poster" controller="Poster" action="Details"/>
+        <mvcSiteMapNode title="Xóa Poster" controller="Poster" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa Poster" controller="Poster" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Nhận xét khách hàng-->
+      <mvcSiteMapNode title="Nhận xét từ khách hàng" controller="NhanXetKhachHang" action="Index">
+        <mvcSiteMapNode title="Tạo nhận xét từ khách" controller="NhanXetKhachHang" action="Create"/>
+        <mvcSiteMapNode title="Chi tiết nhận xét từ khách" controller="NhanXetKhachHang" action="Details"/>
+        <mvcSiteMapNode title="Xóa nhận xét từ khách" controller="NhanXetKhachHang" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa nhận xét từ khách" controller="NhanXetKhachHang" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Khóa học-->
+      <mvcSiteMapNode title="Khóa học" controller="KhoaHoc" action="Index">
+        <mvcSiteMapNode title="Thêm khóa học" controller="KhoaHoc" action="Create"/>
+        <mvcSiteMapNode title="Chi tiết khóa học" controller="KhoaHoc" action="Details"/>
+        <mvcSiteMapNode title="Xóa khóa học" controller="KhoaHoc" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa khóa học" controller="KhoaHoc" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Chi tiết KTX-->
+      <mvcSiteMapNode title="Chi tiết KTX" controller="ChiTietKTX" action="Index">
+        <mvcSiteMapNode title="Tạo chi tiết KTX" controller="ChiTietKTX" action="Create"/>
+        <mvcSiteMapNode title="Bảng dữ liệu" controller="ChiTietKTX" action="Details"/>
+        <mvcSiteMapNode title="Xóa thông tin chi tiết" controller="ChiTietKTX" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa thông tin chi tiết" controller="ChiTietKTX" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--KTX-->
+      <mvcSiteMapNode title="Thông tin KTX" controller="KTX" action="Index">
+        <mvcSiteMapNode title="Tạo ký túc xá" controller="KTX" action="Create"/>
+        <mvcSiteMapNode title="Chi tiết ký túc xá" controller="KTX" action="Details"/>
+        <mvcSiteMapNode title="Xóa ký túc xá" controller="KTX" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa thông tin ký túc xá" controller="KTX" action="Edit"/>
+      </mvcSiteMapNode>
+      
+      <!--Khoa viện-->
+      <mvcSiteMapNode title="Khoa viện" controller="Khoa" action="Index">
+        <mvcSiteMapNode title="Thêm khoa viện" controller="Khoa" action="Create"/>
+        <mvcSiteMapNode title="Chi tiết khoa viện" controller="Khoa" action="Details"/>
+        <mvcSiteMapNode title="Xóa khoa viện" controller="Khoa" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa thông tin khoa viện" controller="Khoa" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Lớp-->
+      <mvcSiteMapNode title="Mã lớp" controller="Lop" action="Index">
+        <mvcSiteMapNode title="Tạo mã lớp" controller="Lop" action="Create"/>
+        <mvcSiteMapNode title="Chi tiết mã lớp" controller="Lop" action="Details"/>
+        <mvcSiteMapNode title="Xóa mã lớp" controller="Lop" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa mã lớp" controller="Lop" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Tầng-->
+      <mvcSiteMapNode title="Tầng" controller="Tang" action="Index">
+        <mvcSiteMapNode title="Thêm tầng" controller="Tang" action="Create"/>
+        <mvcSiteMapNode title="Danh sách tầng" controller="Tang" action="Details"/>
+        <mvcSiteMapNode title="Xóa tầng" controller="Tang" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa tầng" controller="Tang" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Phòng-->
+      <mvcSiteMapNode title="Phòng" controller="Phong" action="Index">
+        <mvcSiteMapNode title="Thêm phòng" controller="Phong" action="Create"/>
+        <mvcSiteMapNode title="Danh sách phòng" controller="Phong" action="Details"/>
+        <mvcSiteMapNode title="Xóa phòng" controller="Phong" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa phòng" controller="Phong" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Chức vụ-->
+      <mvcSiteMapNode title="Chức vụ" controller="ChucVu" action="Index">
+        <mvcSiteMapNode title="Thêm chức vụ" controller="ChucVu" action="Create"/>
+        <mvcSiteMapNode title="Danh sách chức vụ" controller="ChucVu" action="Details"/>
+        <mvcSiteMapNode title="Xóa chức vụ" controller="ChucVu" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa chức vụ" controller="ChucVu" action="Edit"/>
+      </mvcSiteMapNode>
+
+      <!--Loại-->
+      <mvcSiteMapNode title="Loại" controller="Loai" action="Index">
+        <mvcSiteMapNode title="Thêm loại" controller="Loai" action="Create"/>
+        <mvcSiteMapNode title="Danh sách loại" controller="Loai" action="Details"/>
+        <mvcSiteMapNode title="Xóa loại" controller="Loai" action="Delete"/>
+        <mvcSiteMapNode title="Chỉnh sửa loại" controller="Loai" action="Edit"/>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

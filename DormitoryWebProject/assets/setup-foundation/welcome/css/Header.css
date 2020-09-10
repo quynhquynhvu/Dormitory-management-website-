@@ -1,0 +1,252 @@
+header{
+	max-width: 100%;
+	width: 100%;
+	font-size: 14px;
+	background-color: #ECBD8B;
+	box-shadow: 2px 2px 0.8em #222830;
+	overflow: hidden;
+	z-index: 19;
+}
+#normal-header{
+	position: relative;
+}
+#hide-onscroll{
+	position: fixed;
+	top: 0;
+	transition: top 0.5s;
+}
+
+/* Logo Section */
+.my-logo-section-wrap{
+	float: left;
+	max-width: 40%;
+	padding: 1.6em 0 1.6em 1.4em;
+}
+#ueh-logo{
+	width: 40em;
+	height: auto;
+}
+.my-nor-nav{
+	float: right;
+	max-width: 60%;
+	padding: 2.5em 0;
+	display: flex;
+	align-items: center;
+}
+.my-nor-nav ul{
+	margin-bottom: 0;
+	list-style: none; 
+	position: relative
+}
+.my-nor-nav li{
+	display: inline; 
+	float: left; 
+	margin-right: 2em;
+}
+.my-nor-nav a{
+	text-decoration: none;
+	color: #004C56;	
+	font-weight: bold;
+	width: 25%;
+	padding: .75rem 0;
+}
+.my-nor-nav button{
+	/* Basic */
+	margin-right: 1.5em;
+	padding: 1em;
+	text-decoration: none;
+	font-weight: bold;
+	color: #F4841A;
+	background-color: #222830;
+	/* Advance */
+	border: 0.2em solid transparent;
+	border-radius: 0.8em;
+	cursor: grab;
+	box-shadow: 0.3em 0.3em 0.8em #222830;
+}
+.my-nor-nav button:hover{
+	background-color: #111111;
+	box-shadow: 0.3em 0.3em 3em #111111;
+	transition: 0.7s;
+}
+.current-active{opacity: 1}
+
+/* Animate Color text links */
+.my-nor-nav a::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #661802;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path 275ms ease;
+}
+.my-nor-nav a:hover::before {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Back to top bt */
+#back-top-bt {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  border-radius: 56px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#top-arrow{color: white; font-size: 26px; margin: 0.5em}
+#back-top-bt:hover {cursor: pointer; background-color: #333}
+#back-top-bt:hover #top-arrow{color: #F4841A}
+#back-top-bt:active {background-color: #555}
+#back-top-bt.show {opacity: 1;visibility: visible;}
+/* Responsive Design */
+.my-menu-icon {
+	display: none;
+	padding: 1.5em 1em ;
+	font-size: 30px;
+	color: #004C56;
+}
+.my-menu-icon a{
+	color: #004C56;
+}
+.my-overlay-nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	background-color: #FFFAEC;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+.my-overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px; 
+}
+.my-overlay-nav a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px ;
+	color: #004C56;
+	display: block ;
+	transition: 0.3s;
+}
+.my-overlay-nav .my-overlay-content a:last-child{
+	background-color: #222830;
+	color: #F4841A;
+}
+.my-overlay-nav a:hover, .overlay a:focus {
+	color: #661802;
+}
+.my-overlay-nav .my-overlay-content a:last-child:hover{
+	text-decoration: underline;
+}
+.my-overlay-nav .my-close-bt {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+	.my-overlay-nav a {font-size: 20px}
+	.my-overlay-nav .my-close-bt {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+@media  only screen and (max-width: 1142px) {
+	header{
+		font-size: 12px;
+	}
+}
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+	header{
+		font-size: 14px;
+	}
+	.my-logo-section-wrap{
+		max-width: 90%;
+		padding-left: 0;
+	}
+	.my-nor-nav{
+		display: none;
+	}
+	.my-menu-icon{
+		display: block;
+		float: left;
+	}
+}
+@media only screen and (min-width: 591px) and (max-width: 799px){
+	header{
+		font-size: 12px;
+	}
+	.my-nor-nav{
+		display: none;
+	}
+	.my-logo-section-wrap{
+		max-width: 90%;
+		padding: 2.2em 0;
+	}
+	.my-menu-icon{
+		display: block;
+		float: left;
+		font-size: 25px;
+		padding: 1.8em 0.5em;
+	}
+}
+@media only screen and (min-width: 370px) and (max-width: 590px){
+	header{
+		font-size: 8px;
+	}
+	.my-nor-nav{
+		display: none;
+	}
+	.my-logo-section-wrap{
+		max-width: 90%;
+		padding: 2.2em 0;
+	}
+	.my-menu-icon{
+		display: block;
+		float: left;
+		font-size: 20px;
+		padding: 1.5em 0.5em;
+	}
+	.my-overlay-nav a {
+		font-size: 25px;
+	}
+	.my-overlay-nav .my-close-bt {
+		font-size: 50px;
+	}
+}
+@media only screen and (max-width: 369px){
+	header{
+		font-size: 6px;
+	}
+	.my-overlay-nav a {
+		font-size: 20px;
+	}
+	.my-overlay-nav .my-close-bt {
+		font-size: 40px;
+	}
+	.my-nor-nav{
+		display: none;
+	}
+	.my-logo-section-wrap{
+		max-width: 90%;
+		padding: 2.2em 0;
+	}
+	.my-menu-icon{
+		display: block;
+		float: left;
+		font-size: 15px;
+		padding: 1.5em 0.5em;
+	}
+}

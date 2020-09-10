@@ -1,0 +1,101 @@
+﻿@model IEnumerable<DormitoryWebProject.Models.HoaDonLePhi>
+@{
+    ViewBag.Title = "Hóa đơn lệ phí";
+}
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+
+}
+
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>HÓA ĐƠN - LỆ PHÍ</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col">
+                <a href="@Url.Action("TaoHoaDonLePhi", "Hoadon")">
+                    <button type="button" class="btn btn-info add-new">
+                        <i class="fa fa-plus"></i>&nbsp;Tạo mới
+                    </button>
+                </a>
+            </div>
+        </div>
+        <form class="row">
+            <div class="form-group col">
+                <label for="ma_phong">Mã phòng</label>
+                <input type="number" class="form-control" id="ma_phong" placeholder="Mã phòng" min="0" required>
+            </div>
+            <div class="form-group col">
+                <label for="nam_hoc">Năm</label>
+                <input type="number" class="form-control" id="nam_hoc" placeholder="Năm đăng ký" min="2000">
+            </div>
+            <div class="form-group col">
+                <label for="btnTimKiem">&nbsp;</label>
+                <button type="submit" class="btn btn-primary form-control" id="btnTimKiem">Tìm kiếm</button>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col">
+                <table id="myTable" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Mã hóa đơn</th>
+                            <Th>Mã KTX</Th>
+                            <th>Mã phòng</th>
+                            <th>Ngày tạo hóa đơn</th>
+                            <th>Học kỳ</th>
+                            <th>Năm</th>
+                            <th>Đại diện</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach(var item in Model)
+                        {
+                            <tr>
+                                <td>@item.MaHoaDonLePhi</td>
+                                <td>@item.Phong.KTX.KtxID</td>
+                                <td>@item.Phong.PhongID</td>
+                                <td>@item.NgayTaoHoaDon</td>
+                                <td>@item.HocKy</td>
+                                <td>@item.NamHoc</td>
+                                <td>@item.MaSinhVienDaiDien</td>
+                                <td>@item.Phong.TongSoGiuong</td>
+                                <td>@item.Phong.Loai.GiaLePhi</td>
+                                <td>@item.ThanhTien</td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

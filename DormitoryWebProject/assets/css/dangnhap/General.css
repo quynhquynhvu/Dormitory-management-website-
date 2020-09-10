@@ -1,0 +1,30 @@
+	body{
+		font-family: Helvetica, Arial, sans-serif ;
+		overflow:hidden;
+	}
+	#chu{
+		margin-top: 20%;
+	}
+	.login100-more h4,h5{
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		line-height: 30px;
+		text-shadow: 0.1em 0.15em #333;
+	}
+	.login100-more h4{
+		font-size: 25px;
+	}
+	.login100-more h5{
+		font-size: 13px;
+	}
+	.login100-more img{
+		display: block; 
+		margin-left: auto; 
+		margin-right: auto;
+		margin-bottom: 30px;
+	}
+	.login100-form .validate-form{
+		margin: 20px;
+	}
+	

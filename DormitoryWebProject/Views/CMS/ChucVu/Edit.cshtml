@@ -1,0 +1,39 @@
+﻿@model DormitoryWebProject.Models.ChucVu
+
+@{
+    ViewBag.Title = "Edit";
+    ViewBag.formheader = "";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@using (Html.BeginForm("Edit", "ChucVu"))
+{
+    @Html.AntiForgeryToken()
+    <div class="card card-dark">
+        <div class="card-header">
+            <h3 class="card-title" style="font-weight:700">Chỉnh sửa dữ liệu Chức vụ</h3>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.MaChucVu)
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.TenChucVu, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TenChucVu, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TenChucVu, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="/ChucVu" class="btn btn-default bg-navy"><i class="ionicons ion-ios-undo-outline"></i> Trở về</a>
+            <button type="submit" class="btn btn-default bg-teal float-right" name="Save" value="Save"><i class="fa fa-check"></i> <span>Lưu</span></button>
+        </div>
+    </div>
+}
+
+
+
+

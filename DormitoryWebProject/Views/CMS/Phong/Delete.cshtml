@@ -1,0 +1,112 @@
+﻿@model DormitoryWebProject.Models.Phong
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Phong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KTX.TenKTX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KTX.TenKTX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loai.TenLoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loai.TenLoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tang.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tang.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongSoGiuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongSoGiuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoSoVatChat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoSoVatChat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath5)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

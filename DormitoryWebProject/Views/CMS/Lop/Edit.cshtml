@@ -1,0 +1,46 @@
+﻿@model DormitoryWebProject.Models.Lop
+
+@{
+    ViewBag.Title = "Edit";
+    ViewBag.formheader = "";
+    ViewData["aCMS"] = "active";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@using (Html.BeginForm("Create", "Lop", FormMethod.Post))
+{
+    <div class="card card-dark">
+        <div class="card-header">
+            <h3 class="card-title" style="font-weight:700">Chỉnh sửa chi tiết @Model.MaLop</h3>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.MaLop)
+                    <div class="form-group row">
+                        <label for="ktxFK" class="control-label col-md-2">@Html.DisplayNameFor(model => model.MaLop)</label>
+                        <div class="col-xl-4 col-md-6">
+                            @Html.EditorFor(model => model.MaLop, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.MaLop, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="ktxFK" class="control-label col-md-2">Khoa</label>
+                        <div class="col-xl-4 col-md-6">
+                            @Html.DropDownList("MaKhoa", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.MaKhoa, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="/Lop" class="btn btn-default bg-navy"><i class="ionicons ion-ios-undo-outline"></i> Trở về</a>
+            <button type="submit" class="btn btn-default bg-teal float-right" name="Save" value="Save"><i class="fa fa-check"></i> <span>Lưu</span></button>
+        </div>
+    </div>
+}
+
+
+

@@ -1,0 +1,92 @@
+/*css tìm kiếm nâng cao*/
+.modal-body td, .modal-body th{
+  padding-top: 2em;
+}
+    /*Content Header (Page header) --*/
+/*chỉnh tên tiêu đề của content*/
+.content-header {
+    padding: 15px .6rem
+}
+
+.text-sm .content-header {
+    padding: 10px .5rem
+}
+
+.content-header h1 {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #004c56;
+    font-family: Helvetica, Arial, sans-serif ;
+    font-weight: bold;
+}
+
+.text-sm .content-header h1 {
+    font-size: 1.5rem
+}
+
+.content-header .breadcrumb {
+    background: 0 0;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+    padding: 0
+}
+
+.text-sm .content-header .breadcrumb {
+    line-height: 1.5rem
+}
+/*table*/
+.card-header h3{
+	font-weight: bold;
+	color: #004c56;
+}
+.card-body {
+	font-size: 14px;
+	text-align: center;
+}
+.card-body thead{
+    font-size: 15px;
+	background-color: #CCFFFF;
+    text-align: center;
+}
+.card-body #tablephong td{
+	text-align: left;
+}
+/*formgroup*/
+#__formgroup{
+	border-bottom: 1px solid black;
+	width: 14em;
+}
+#__formgroup select{
+	border: none;
+	padding-left: 6em;
+}
+
+@media (max-width: 768px) {
+	.card-body {
+	text-align: left;
+}
+.card-body thead{
+	text-align: center;
+}
+#__formgroup{
+	width: 9em;
+}
+#__formgroup select{
+	padding-left: 1em;
+}
+
+}
+
+@media (max-width: 1024px) {
+#btn-timkiem-download button{
+	display: block;
+}
+
+}
+@media (max-width: 767px) {
+#btn-timkiem-download button{
+	display: inline-block;
+	font-size: 13px;
+}
+
+}

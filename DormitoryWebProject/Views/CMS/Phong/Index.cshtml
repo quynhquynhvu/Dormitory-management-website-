@@ -1,0 +1,93 @@
+﻿@model IEnumerable<DormitoryWebProject.Models.Phong>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KTX.TenKTX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Loai.TenLoai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tang.Ten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenPhong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TongSoGiuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CoSoVatChat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picturePath1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picturePath2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picturePath3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picturePath4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.picturePath5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KTX.TenKTX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Loai.TenLoai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tang.Ten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenPhong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TongSoGiuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoSoVatChat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picturePath1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picturePath2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picturePath3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picturePath4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.picturePath5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaPhong }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaPhong }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaPhong })
+        </td>
+    </tr>
+}
+
+</table>

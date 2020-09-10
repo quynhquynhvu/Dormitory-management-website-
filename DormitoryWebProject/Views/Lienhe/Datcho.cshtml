@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Đặt chỗ ở";
+    Layout = "~/Views/Shared/_LayoutWelcome.cshtml";
+}
+@section PageStyle{
+    @Styles.Render("~/assets/css/datcho/General.css")
+}
+
+<!-- Breadcrumb section -->
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Trangchu")">TRANG CHỦ</a></li>
+    <li><a href="@Url.Action("Index","Lienhe")">LIÊN HỆ</a></li>
+    <li class="active">ĐẶT CHỖ</li>
+</ol>
+
+<!-- Main Section -->
+<div class="container">
+    <h2 class="text-center">THÔNG TIN ĐĂNG KÝ CHỖ Ở</h2>
+    <p class="text-center">Vui lòng cung cấp thông tin đăng ký, chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất</p>
+    <form>
+        <div class="form-group">
+            <label for="guestName">Họ và tên:</label>
+            <input type="text" class="form-control" id="guestName" placeholder="Đỗ Nam Trung">
+        </div>
+        <div class="form-group">
+            <label for="guestID">Mã số sinh viên:</label>
+            <input type="text" class="form-control" id="guestID" placeholder="311XXXx">
+        </div>
+        <div class="form-group">
+            <label for="guestEmail">Email:</label>
+            <input type="email" class="form-control" id="guestEmail" placeholder="student@st.ueh.edu.vn">
+        </div>
+        <div class="form-group">
+            <label for="guestPhoneNo">Số điện thoại:</label>
+            <input type="tel" class="form-control" id="guestPhoneNo" placeholder="09XXXX">
+        </div>
+        <div class="form-group">
+            <label for="KTXName">Ký túc xá đăng ký:</label>
+            <select name="KTXName" id="KTXName" class="form-control">
+                <option value="">Chọn một ký túc xá</option>
+                <option value="">KTX 135A Trần Hưng Đạo</option>
+                <option value="">KTX 43 - 45 Nguyễn Chí Thanh</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comment">Nội dung yêu cầu của bạn:</label>
+            <textarea class="form-control" rows="7" id="comment" placeholder="Chào Ban Quản lý KTX, em tên là ...."></textarea>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" value="">Tôi xin chịu trách nhiệm với mọi thông tin cung cấp</label>
+        </div>
+        <button type="submit" class="slide" data-toggle="modal" data-target="#submitSuccessModal">&nbsp;</button>
+    </form>
+</div>
+
+<!-- Successful Submission Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="submitSuccessModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel" style="font-weight: bold; color: #222830">HỆ THỐNG KÝ TÚC XÁ TRƯỜNG ĐẠI HỌC KINH TẾ TP.HCM</h4>
+            </div>
+            <div class="modal-body text-center">
+                <h1 style="color: #5cb85c; font-size: 5em"><i class="fa fa-check-circle"></i></h1>
+                <h2>YÊU CẦU CỦA BẠN ĐÃ ĐƯỢC TIẾP NHẬN THÀNH CÔNG</h2>
+                <p>Vui lòng kiểm tra Email hoặc tin nhắn để chờ tin từ ký túc xá nhé</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-success">Trở về trang chủ</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section PageScript{
+    @Scripts.Render("~/assets/js/lienhe/page-setup.js")
+}
+

@@ -1,0 +1,37 @@
+﻿@model DormitoryWebProject.ViewModels.TrangChuViewModel
+@{
+    ViewBag.Title = "Trang Chủ";
+    Layout = "~/Views/Shared/Main/_LayoutWelcome.cshtml";
+}
+
+@section PageStyle {
+    @Styles.Render("~/assets/css/trangchu/General.css")
+    @Styles.Render("~/assets/plugins/aos/aos.css")
+    <!-- Stars rating -->
+    <link href="~/assets/plugins/bootstrap-star-rating/css/star-rating.min.css" media="all" rel="stylesheet" />
+}
+<!-- Dormitory Poster-->
+@Html.Partial("_DormitoryPoster", Model.LISTPoster)
+<div class="container-fluid content-section">
+    <!-- Benefit Section -->
+    @Html.Partial("_BenefitSection")
+    <!-- Small Screen Benefit Section - Carousel -->
+    @Html.Partial("_smScreenBenefitSection")
+    <!-- Introduction -->
+    @Html.Partial("_Introduction")
+    <!-- Our Rooms -->
+    @*@Html.Partial("_OurRooms", Model.LISTChiTietKTX)*@
+    <!-- Testimonial Section -->
+    @Html.Partial("_TestimonialSection", Model.LISTNhanXetKhachHang)
+    <!-- Card Section -->
+    @Html.Partial("_CardSection")
+</div>
+@section PageScript{
+    @Scripts.Render("~/assets/js/trangchu/page-setup.js")
+    @Scripts.Render("~/assets/plugins/aos/aos.js")
+    <!-- Star rating JS -->
+    <script src="~/assets/plugins/bootstrap-star-rating/js/star-rating.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
+}

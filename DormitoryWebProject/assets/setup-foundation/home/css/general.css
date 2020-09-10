@@ -1,0 +1,229 @@
+﻿.content p, .title, .external-event{
+    font-family: Roboto !important;
+}
+.content h1, h2, h3, h4, h5, h6 {
+    font-weight:700;
+}
+    /* Chỉnh css cho User Avatar Area */
+    .user-img-scale {
+        width: 3.5rem !important;
+        margin-right: 0.25rem;
+        transition: 0.3s;
+    }
+.user-img-scale-focus {
+    width: 3.5rem !important;
+    margin-right: 0.25rem;
+    transition: 0.3s;
+}
+/* Breadcrumbs adjustment*/
+.breadcrumb{
+    font-family:Roboto !important;
+    font-size:14px;
+}
+/*Sidebar Search Area*/
+.sidebar-form input[type="text"], #search-btn {
+    background-color: #ffffff;
+}
+
+/*Page Title*/
+.page-title-sm, .page-title-xs{
+    font-family:Roboto;
+}
+/*pushmenu button*/
+.navbar-nav .nav-item .nav-link a[role="button"]{
+padding-top:0.2rem;
+}
+#formsearch input {
+    outline: none;
+}
+
+    #formsearch input[type=search] {
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    #formsearch input::-webkit-search-decoration,
+    #formsearch input::-webkit-search-cancel-button {
+        display: none;
+    }
+
+
+    #formsearch input[type=search] {
+        background: #fff url(https://dl.dropboxusercontent.com/s/p7ci283ebk841yj/search-icon.png) no-repeat 9px center;
+        width: 55px;
+        -webkit-border-radius: 10em;
+        -moz-border-radius: 10em;
+        border-radius: 10em;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        transition: all .5s;
+    }
+
+        #formsearch input[type=search]:focus {
+            width: 130px;
+            background-color: #fff;
+            border-color: #66CC75;
+            -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+            -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+            box-shadow: 0 0 5px rgba(109,207,246,.5);
+        }
+
+
+    #formsearch input:-moz-placeholder {
+        color: #999;
+    }
+
+    #formsearch input::-webkit-input-placeholder {
+        color: #999;
+    }
+
+    #formsearch input[type=search] {
+        width: 15px;
+        height: inherit;
+        padding-left: 10px;
+        color: transparent;
+        cursor: pointer;
+    }
+
+        #formsearch input[type=search]:hover {
+            background-color: #fff;
+        }
+
+        #formsearch input[type=search]:focus {
+            width: 160px;
+            padding-left: 32px;
+            color: #000;
+            background-color: #fff;
+            cursor: auto;
+        }
+
+    #formsearch input:-moz-placeholder {
+        color: transparent;
+    }
+
+    #formsearch input::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+/*Căn lề cho nav-link*/
+.nav-link p {
+    margin-left: 1.2rem !important;
+}
+
+/*Chỉnh màu cho main sidebar*/
+.body {
+    font-family: Roboto, Arial, sans-serif !important; 
+    overflow:hidden;
+}
+
+
+.breadcrumb {
+    background-color: inherit;
+    cursor: pointer
+}
+
+#breadcrumb_fix {
+    margin: 0;
+    background-color:inherit;
+}
+
+
+#_anhome {
+    display: none;
+}
+
+/*Màu nền sidebar*/
+.main-sidebar {
+}
+
+    .main-sidebar {
+
+    }
+/*Màu chữ sidebar*/
+.nav-link {
+
+}
+
+/*Màu nền và màu chữ khi 1 node được chọn*/
+.sidebar-dark-purple .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-purple .nav-sidebar > .nav-item > .nav-link.active{
+    color: #ffc107 !important;
+}
+
+/*Màu nền submenu*/
+.nav-item .nav-treeview {
+
+}
+
+/*Màu chữ submenu*/
+    .nav-item .nav-treeview .nav-link {
+
+    }
+
+.nav-sidebar .nav-item > .nav-link .right {
+    transition: transform .3s ease !important;
+}
+
+/*Chỉnh CSS cho Upload Image*/
+
+@media (min-width: 320px) {
+    .main-sidebar form {
+        display: block;
+    }
+    .page-title-sm, .page-title-xs {
+        display: none;
+    }
+}
+@media (min-width: 375px){
+    .page-title-xs {
+        display: block;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .page-title-xs {
+        display: none;
+    }
+    .page-title-sm {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-sidebar .sidebar-form > .input-group {
+        display: none !important;
+    }
+    .main-sidebar:hover .sidebar-form >.input-group {
+        display: none !important;
+    }
+    .main-sidebar:focus .sidebar-form > .input-group{
+        display: none !important;
+    }
+    .page-title-sm {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    #formsearch {
+        display: none
+    }
+
+    #breadcrumb_fix {
+        display: none
+    }
+
+    #_anhome {
+        display: block
+    }
+}

@@ -1,0 +1,118 @@
+﻿@using DormitoryWebProject.Extensions
+@using System.Globalization
+@model IEnumerable<DormitoryWebProject.Models.ChiTietKTX>
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.formheader = "";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@section PageStyle{
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/css/CMS/ChiTietKTX/Index.css" rel="stylesheet" />
+}
+@section PageScript{
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $(".table").DataTable({
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+}
+<div class="card card-dark">
+    <div class="card-header">
+        <h3 class="card-title" style="font-weight:700">Chi tiết Ký túc xá</h3>
+        <a href="@Url.Action("Create","ChiTietKTX")" class="btn btn-primary bg-olive btn-flat btn-xs float-right" style="font-weight:700"><i class="fa fa-plus"></i></a>
+    </div>
+    <div class="card-body">
+        <div class="float-md-right float-sm-none">
+            <a href="@Url.Action("Create","ChiTietKTX")" class="btn btn-primary bg-primary btn-flat btn-sm" style="font-weight:700;border:none"><i class="fa fa-plus"></i> Thêm mới</a>
+        </div>
+        <table id="ChiTietKTX" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.KTX.TenKTX)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rated)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GiaThueThapNhat)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GiaThueCaoNhat)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.MoTaKTX)
+                    </th>
+                    <th>
+                        Hình ảnh
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    string modal = "#md" + item.MaChiTietKTX.ToString();
+                    <tr>
+                        <td>
+                            @Html.ActionLink(item.KTX.TenKTX, "Details", new { id = item.MaChiTietKTX })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rated)
+                        </td>
+                        <td>
+                            @item.GiaThueThapNhat.ToString("C0", CultureInfo.GetCultureInfo("vi-VN"))
+                        </td>
+                        <td>
+                            @item.GiaThueCaoNhat.ToString("C0", CultureInfo.GetCultureInfo("vi-VN"))
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="modal" data-target="@modal">Xem mô tả</a>
+                        </td>
+                        <td>
+                            <a href="@item.picturePath1" class="pic-thumbnail"><i class="ionicons ion-eye"></i><span><img src="@item.picturePath1" style="width:auto;height:200px" /></span></a>
+                            <a href="@item.picturePath2" class="pic-thumbnail"><i class="ionicons ion-eye"></i><span><img src="@item.picturePath2" style="width:auto;height:200px" /></span></a>
+                            <a href="@item.picturePath3" class="pic-thumbnail"><i class="ionicons ion-eye"></i><span><img src="@item.picturePath3" style="width:auto;height:200px" /></span></a>
+                            <a href="@item.picturePath4" class="pic-thumbnail"><i class="ionicons ion-eye"></i><span><img src="@item.picturePath4" style="width:auto;height:200px" /></span></a>
+                            <a href="@item.picturePath5" class="pic-thumbnail"><i class="ionicons ion-eye"></i><span><img src="@item.picturePath5" style="width:auto;height:200px" /></span></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@foreach (var item in Model)
+{
+    string modal = "md" + item.MaChiTietKTX.ToString();
+    <div class="modal fade" id="@modal" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">@Html.DisplayNameFor(model => model.MoTaKTX)</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-justify">@item.MoTaKTX</p>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

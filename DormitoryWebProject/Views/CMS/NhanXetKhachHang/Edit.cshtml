@@ -1,0 +1,118 @@
+﻿@model DormitoryWebProject.Models.NhanXetKhachHang
+
+@{
+    ViewBag.Title = "Edit";
+    ViewBag.formheader = "";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@section PageStyle{
+    <!-- Stars rating -->
+    <link href="~/assets/plugins/bootstrap-star-rating/css/star-rating.min.css" media="all" rel="stylesheet" />
+}
+@section PageScript {
+    <!-- Star rating JS -->
+    <script src="~/assets/plugins/bootstrap-star-rating/js/star-rating.min.js"></script>
+    <!-- Custom File Input -->
+    <script src="~/assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                bsCustomFileInput.init();
+            });
+            $(".my-rating").rating();
+            $(".my-rating").rating({
+                starCaptions: function (val) {
+                    if (val < 3.5) {
+                        return val + ' Stars';
+                    }
+                    else if (val >= 4.5) {
+                        return 'Brilliant'
+                    }
+                    else if (val >= 3.5) {
+                        return 'Awesome'
+                    }
+                }
+            });
+        });
+    </script>
+}
+@using (Html.BeginForm("Create", "NhanXetKhachHang", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="card card-dark">
+        <div class="card-header">
+            <h3 class="card-title" style="font-weight:700">Chỉnh sửa nhận xét của @Model.TenKhachHang</h3>
+        </div>
+        <div class="card-body">
+            <div class="container">
+
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.MaNhanXet)
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.TenKhachHang, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-6">
+                            @Html.EditorFor(model => model.TenKhachHang, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TenKhachHang, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="MaKhoaHoc" class="control-label col-md-2">Số khóa</label>
+                        <div class="col-md-2">
+                            @Html.DropDownList("MaKhoaHoc", null, htmlAttributes: new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.MaKhoaHoc, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.CongViec, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-6">
+                            @Html.EditorFor(model => model.CongViec, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.CongViec, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.Rated, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Rated, htmlAttributes: new { @class = "rating my-rating", data_min = 0, data_max = 5, data_step = 0.5, data_size = "xs" })
+                            @Html.ValidationMessageFor(model => model.Rated, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.BinhLuan, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <textarea id="BinhLuan" name="BinhLuan" rows="8" class="col-md-12" placeholder="">@Model.BinhLuan</textarea>
+                            @Html.ValidationMessageFor(model => model.BinhLuan, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload" name="pictureUpload">
+                                <label class="custom-file-label" for="pictureUpload1">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="/NhanXetKhachHang" class="btn btn-default bg-navy"><i class="ionicons ion-ios-undo-outline"></i> Trở về</a>
+            <button type="submit" class="btn btn-default bg-teal float-right" name="Save" value="Save"><i class="fa fa-check"></i> <span>Lưu</span></button>
+        </div>
+    </div>
+}
+
+
+
+
+

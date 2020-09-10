@@ -1,0 +1,132 @@
+﻿@using DormitoryWebProject.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Đăng Nhập";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap CSS Plugin-->
+    @Styles.Render("~/assets/plugins/bootstrap/css/bootstrap.min.css")
+    <!--Font Awesome CSS Plugin-->
+    @Styles.Render("~/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css")
+    <!--Linear Icons CSS Plugin-->
+    @Styles.Render("~/assets/fonts/Linearicons-Free-v1.0.0/icon-font.min.css")
+    <!--Animate CSS Plugin-->
+    @Styles.Render("~/assets/plugins/animate/animate.css")
+    <!--Hamburgers CSS Plugin-->
+    @Styles.Render("~/assets/plugins/css-hamburgers/hamburgers.min.css")
+    <!--Animsition CSS Plugin-->
+    @Styles.Render("~/assets/plugins/animsition/css/animsition.min.css")
+    <!--Select2 CSS Plugin-->
+    @Styles.Render("~/assets/plugins/select2/select2.min.css")
+    <!--Date Range Picker CSS Plugin-->
+    @Styles.Render("~/assets/plugins/daterangepicker/daterangepicker.css")
+    <!--Setup CSS Plugin-->
+    @Styles.Render("~/assets/css/dangnhap/util.css")
+    @Styles.Render("~/assets/css/dangnhap/main.css")
+    <!--Page CSS-->
+    @Styles.Render("~/assets/css/dangnhap/General.css")
+</head>
+<body style="background-color: #666666;">
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title p-b-43">
+                        ĐĂNG NHẬP
+                    </span>
+
+
+                    <div class="wrap-input100 validate-input" data-validate="Vui lòng nhập tên tài khoản!">
+                        <input class="input100" type="text" name="Tên đăng nhập">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100"><i class="fa fa-user"></i><span>          </span>Tên đăng nhập</span>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input" data-validate="Vui lòng nhập mật khẩu!">
+                        <input class="input100" type="password" name="pass">
+                        <span class="focus-input100"></span>
+                        <span class="label-input100"><i class="fa fa-lock"></i><span>          </span>Mật khẩu</span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-t-3 p-b-32">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Nhớ tài khoản
+                            </label>
+                        </div>
+
+                        <div>
+                            <a href="#" class="txt1">
+                                <u>Quên mật khẩu?</u>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            ĐĂNG NHẬP
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-46 p-b-20">
+                        <span class="txt2">
+                            HOẶC
+                        </span>
+                        <hr>
+                    </div>
+
+                    <div class="login100-form-social flex-c-m">
+                        <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+                            <img class="img-responsive" src="~/assets/images/dangnhap/logolms.png" alt="logo LMS" />
+                        </a>
+
+                        <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+                            <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
+
+                <div class="login100-more" style="background-image: url('https://iitzig.dm.files.1drv.com/y4mzK6urw3kEdmQHQ8C1VGdbCX31NPf8upX6gfgh2TXbQe0Z1icWcU-MZkgUJZVhIdn5hZjYT2NVw3Y9phpyAn6XAV6iRE-CfuQktDEHOu4hrQU7jUf2NFhelsGsnlgHVJOcR_9DIjUhtkHlsP-GBp9zU4VK-BhDTVdlLLdINIi5vgCYm6t6ZhYgk7w0TcdCVFz1JPtxdptzZRKyxh-BzYxFQ?width=610&height=814&cropmode=none');">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12" id="chu">
+                                <img class="img-responsive" src="~/assets/images/dangnhap/logo.png" alt="logo UEH" />
+                                <h4>HỆ THỐNG KÝ TÚC XÁ</h4>
+                                <h4>TRƯỜNG ĐẠI HỌC KINH TẾ TP.HCM</h4>
+                                <h5>DORMITORY OF UNIVERSITY OF ECONOMICS HO CHI MINH CITY </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery library v3.5.1-->
+    @Scripts.Render("https://code.jquery.com/jquery-3.5.1.min.js")
+    <!--Animsition JS Plugin-->
+    @Scripts.Render("~/assets/plugins/animsition/js/animsition.min.js")
+    <!--Bootstrap JS Plugin-->
+    @Scripts.Render("https://unpkg.com/@popperjs/core@2")
+    @Scripts.Render("~/assets/plugins/bootstrap/js/bootstrap.min.js")
+    <!--Select2 JS Plugin-->
+    @Scripts.Render("~/assets/plugins/select2/select2.min.js")
+    <!--Date Range Picker JS Plugin-->
+    @Scripts.Render("~/assets/plugins/daterangepicker/moment.min.js")
+    <!--Countdown Time JS Plugin-->
+    @Scripts.Render("~/assets/plugins/countdowntime/countdowntime.js")
+    <!--Page Script-->
+    @Scripts.Render("~/assets/js/dangnhap/main.js")
+</body>
+</html>

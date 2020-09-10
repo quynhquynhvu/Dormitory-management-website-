@@ -1,0 +1,151 @@
+﻿
+@{
+    ViewBag.Title = "Thêm người dùng";
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Thêm người dùng</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- text input -->
+                                    <div class="form-group">
+                                        <label for="inputID">Họ và Tên</label>
+                                        <input type="text" id="inputName" class="form-control" value="">
+                                        <br />
+                                        <div class="form-group">
+                                            <label for="inputID">Tên đăng nhập</label>
+                                            <input type="text" id="inputName" class="form-control" value="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6" align="center">
+                                    <img src="~/assets/images/nguoidung/thongtinnguoidung/_MG_7951.jpg" class="img-circle elevation-3" alt="User" height="150" width="150" />
+                                    <p>Ảnh người dùng</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- textarea -->
+                                    <div class="form-group">
+                                        <label for="inputID">Email</label>
+                                        <input type="text" id="inputName" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputID">Mật khẩu</label>
+                                        <input type="text" id="inputName" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputName">SĐT</label>
+                                        <input type="text" id="inputName" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" align="center">
+                                    <!-- radio -->
+                                    <div class="form-group">
+                                        <label for="inputName">Chi nhánh</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="radio1">
+                                            <label class="form-check-label">KTX135</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="radio1" checked>
+                                            <label class="form-check-label">KTX4345</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3" align="center">
+                                    <!-- radio -->
+                                    <div class="form-group">
+                                        <label for="inputName">Hiệu lực</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radio1" checked>
+                                            <label class="form-check-label">Có</label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radio1">
+                                            <label class="form-check-label">Không</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <!-- textarea -->
+                                    <div class="form-group">
+                                        <label for="inputID">Địa chỉ</label>
+                                        <input type="text" id="inputName" class="form-control" value="">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputID">Vai trò</label>
+                                        <input type="text" id="inputName" class="form-control" value="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="inputID">Địa chỉ</label>
+                                        <input type="text" id="inputName" class="form-control" value="">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <!-- select -->
+                                    <div class="form-group">
+                                        <label>Nhóm</label>
+                                        <select class="form-control">
+                                            <option>Admin</option>
+                                            <option>Sửa chữa</option>
+                                            <option>Quản lý</option>
+                                            <option>Kế toán</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="@Url.Action("Quanlynguoidung","Home")" class="btn btn-secondary">Cancel</a>
+                                <input type="submit" value="Save" class="btn btn-success float-right">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+        </div>
+        <br />
+    </section>
+    <!-- /.content -->
+</div>
+

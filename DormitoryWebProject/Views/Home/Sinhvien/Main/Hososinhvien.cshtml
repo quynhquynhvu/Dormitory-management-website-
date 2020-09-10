@@ -1,0 +1,235 @@
+﻿
+@{
+    ViewBag.Title = "Sinh viên";
+}
+@section PageStyle{
+    <!-- DataTables -->
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <style>
+        .content-wrapper .input-group-text white lighten-1 {
+            background: white;
+        }
+    </style>
+}
+<br />
+<div class="content-wrapper">
+    <section class="content">
+        <div class="row">
+            <div class="container">
+
+                <div class="col-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Danh sách sinh viên</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group col-md-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                                </div>
+                                <input class="form-control" type="text" placeholder="Tìm kiếm theo tên sinh viên" aria-label="Search">
+                                <div class="input-group-append" data-toggle="modal" data-target="#exampleModal">
+                                    <span class="input-group-text white lighten-1" id="basic-text1"><i class="fas fa-angle-down"></i></span>
+                                </div>
+                            </div>
+
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="ModalLabel">Tìm kiếm nâng cao</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div><br />
+
+                                        <div class="col-10 form-group">
+                                            <div class="col-md-10 form-group">
+                                                <select class="form-control">
+                                                    <option value="">KTX</option>
+                                                    <option value="">43-45</option>
+                                                    <option value="">135A</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-10 form-group">
+                                                <select class="form-control">
+                                                    <option value="">Khoá</option>
+                                                    <option value="">43</option>
+                                                    <option value="">44</option>
+                                                    <option value="">45</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-10 form-group">
+                                                <select class="form-control">
+                                                    <option value="">Khoa</option>
+                                                    <option value="">CNTTKD</option>
+                                                    <option value="">KDQT-Marketing</option>
+                                                    <option value="">Toán-Thống kê</option>
+                                                    <option value="">Lý luận chính trị</option>
+                                                    <option value="">Quản trị</option>
+                                                    <option value="">Kinh tế</option>
+                                                    <option value="">Tài chính</option>
+                                                    <option value="">Tài chính công</option>
+                                                    <option value="">Kế toán</option>
+                                                    <option value="">Ngoại ngữ kinh tế</option>
+                                                    <option value="">Luật</option>
+                                                    <option value="">Viện du lịch</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-10 form-group">
+                                                <select class="form-control">
+                                                    <option value="">Lớp</option>
+                                                    <option value="">BI001</option>
+                                                    <option value="">EC001</option>
+                                                    <option value="">ER001</option>
+                                                    <option value="">ST001</option>
+                                                    <option value="">...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-10 form-group">
+                                                <select class="form-control">
+                                                    <option value="">Trạng thái</option>
+                                                    <option value="">Còn ở</option>
+                                                    <option value="">Hết ở</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-info"><i class="fas fa-search"> Tìm kiếm</i></button>
+                                                <button class="btn btn-secondary"><i class="fas fa-redo"> Nhập lại</i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="content">
+                                <section class="row">
+                                    <div class="container-fluid">
+
+                                        <div class="col-12">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <table id="example1" class="table table-bordered table-striped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>MSSV</th>
+                                                                <th>Tên sinh viên</th>
+                                                                <th>KTX</th>
+                                                                <th>Phòng</th>
+                                                                <th>Lớp</th>
+                                                                <th>Khoá</th>
+                                                                <th>Khoa</th>
+                                                                <th>Trạng thái</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>31171022984</td>
+                                                                <td>Ngô Phương Thảo Nguyên</td>
+                                                                <td>135A</td>
+                                                                <td>L102</td>
+                                                                <td>BI001</td>
+                                                                <td>K43</td>
+                                                                <td>CNTTKD</td>
+                                                                <td>Còn ở</td>
+                                                                <td>
+                                                                    <a href="@Url.Action("Thongtinsinhvien","Home")" style="color:dodgerblue" class="far fa-eye"></a>
+                                                                    <a style="color:forestgreen" class="far fa-edit"></a>
+                                                                    <a style="color:red" class="far fa-trash-alt"></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>31171022975</td>
+                                                                <td>Trần Nguyễn Nhật Linh</td>
+                                                                <td>135A</td>
+                                                                <td>L102</td>
+                                                                <td>FN002</td>
+                                                                <td>K43</td>
+                                                                <td>Tài chính</td>
+                                                                <td>Còn ở</td>
+                                                                <td>
+                                                                    <a href="@Url.Action("Thongtinsinhvien","Home")" style="color:dodgerblue" class="far fa-eye"></a>
+                                                                    <a style="color:forestgreen" class="far fa-edit"></a>
+                                                                    <a style="color:red" class="far fa-trash-alt"></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>31171022976</td>
+                                                                <td>Trần Quang Mai Linh</td>
+                                                                <td>135A</td>
+                                                                <td>L102</td>
+                                                                <td>FN004</td>
+                                                                <td>K43</td>
+                                                                <td>Tài chính</td>
+                                                                <td>Còn ở</td>
+                                                                <td>
+                                                                    <a href="@Url.Action("Thongtinsinhvien","Home")" style="color:dodgerblue" class="far fa-eye"></a>
+                                                                    <a style="color:forestgreen" class="far fa-edit"></a>
+                                                                    <a style="color:red" class="far fa-trash-alt"></a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>31171022955</td>
+                                                                <td>Nguyễn Thị Mỹ Duyên</td>
+                                                                <td>135A</td>
+                                                                <td>L102</td>
+                                                                <td>IB002</td>
+                                                                <td>K43</td>
+                                                                <td>KDQT-Marketing</td>
+                                                                <td>Còn ở</td>
+                                                                <td>
+                                                                    <a href="@Url.Action("Thongtinsinhvien","Home")" style="color:dodgerblue" class="far fa-eye"></a>
+                                                                    <a style="color:forestgreen" class="far fa-edit"></a>
+                                                                    <a style="color:red" class="far fa-trash-alt"></a>
+                                                                </td>
+                                                            </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+@section PageScript{
+    <!-- DataTables -->
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+}
+
+
+

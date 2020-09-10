@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DormitoryWebProject.Models.KTX>
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.formheader = "";
+    ViewData["aCMS"] = "active";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@section PageStyle{
+    <link href="~/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="~/assets/css/CMS/KTX/Index.css" rel="stylesheet" />
+}
+@section PageScript{
+    <script src="~/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script>
+        $(function () {
+            $(".table").DataTable({
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+    </script>
+}
+<div class="card card-dark">
+    <div class="card-header">
+        <h3 class="card-title" style="font-weight:700">Ký túc xá</h3>
+        <a href="@Url.Action("Create","KTX")" class="btn btn-primary bg-olive btn-flat btn-xs float-right" style="font-weight:700"><i class="fa fa-plus"></i></a>
+    </div>
+    <div class="card-body">
+        <div class="float-md-right float-sm-none">
+            <a href="@Url.Action("Create","KTX")" class="btn btn-primary bg-primary btn-flat btn-sm" style="font-weight:700;border:none"><i class="fa fa-plus"></i> Thêm mới</a>
+        </div>
+        <table id="KtxDM" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.TenKTX)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DiaChi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SDTLienHe)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(item.TenKTX, "Details", new { id = item.MaKTX })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SDTLienHe)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+

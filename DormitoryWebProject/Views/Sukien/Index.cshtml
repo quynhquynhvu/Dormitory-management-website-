@@ -1,0 +1,175 @@
+﻿@{
+    ViewBag.Title = "Sự Kiện";
+    Layout = "~/Views/Shared/Main/_LayoutWelcome.cshtml";
+}
+@section PageStyle{
+    @Styles.Render("~/assets/css/sukien/General.css")
+    @Styles.Render("~/assets/plugins/aos/aos.css")
+    @Styles.Render("~/assets/plugins/hover-master/hover-min.css")
+}
+<!-- Main section -->
+<div class="main-section">
+    <div class="container-fluid">
+        <div class="row text-center" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="true">
+            <h3 class="title visible-lg visible-md">TIN TỨC VÀ SỰ KIỆN UEH</h3>
+            <h5 class="title visible-sm visible-xs">TIN TỨC VÀ SỰ KIỆN UEH</h5>
+            <hr style="border-bottom: 2px solid #F4841A; margin-top: 0.5em; ">
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-11 col-sm-10 col-xs-10" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="true">
+                <div class="row">
+                    <form class="form-inline visible-lg visible-md" data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
+                        <select class="form-control">
+                            <option value="">Bài viết mới nhất</option>
+                            <option value="">Bài viết được nhiều người xem nhất</option>
+                            <option value="">Bài viết được quan tâm nhiều nhất</option>
+                            <option value="">Bài viết sự kiện đã diễn ra gần đây</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="">Chọn năm</option>
+                            <option value="">Năm 2020</option>
+                            <option value="">Năm 2019</option>
+                            <option value="">Năm 2018</option>
+                            <option value="">Năm 2017</option>
+                        </select>
+                        <select class="form-control">
+                            <option value="">Chọn tháng</option>
+                            <option value="">Tháng 1</option>
+                            <option value="">Tháng 2</option>
+                            <option value="">Tháng 3</option>
+                            <option value="">Tháng 4</option>
+                            <option value="">Tháng 5</option>
+                            <option value="">Tháng 6</option>
+                            <option value="">Tháng 7</option>
+                            <option value="">Tháng 8</option>
+                            <option value="">Tháng 9</option>
+                            <option value="">Tháng 10</option>
+                            <option value="">Tháng 11</option>
+                            <option value="">Tháng 12</option>
+                        </select>
+                        <button type="button" class="btn btn-md btn-default bt-custom hvr-shadow">
+                            <span class="glyphicon glyphicon-search"></span>
+                            Tìm kiếm
+                        </button>
+                    </form>
+                    <button type="button" class="btn btn-xs btn-default visible-xs" data-toggle="collapse" data-target="#form-filter-collapse" aria-expanded="false" aria-controls="form-filter-collapse"><span class="glyphicon glyphicon-filter"></span> Lọc</button>
+                    <button type="button" class="btn btn-sm btn-default visible-sm bt-custom" data-toggle="collapse" data-target="#form-filter-collapse" aria-expanded="false" aria-controls="form-filter-collapse"><span class="glyphicon glyphicon-filter"></span> Lọc</button>
+                    <div class="collapse form-container" id="form-filter-collapse">
+                        <form class="">
+                            <select class="form-control input-sm">
+                                <option value="">Bài viết mới nhất</option>
+                                <option value="">Bài viết được nhiều người xem nhất</option>
+                                <option value="">Bài viết được quan tâm nhiều nhất</option>
+                                <option value="">Bài viết sự kiện đã diễn ra gần đây</option>
+                            </select>
+                            <select class="form-control input-sm">
+                                <option value="">Chọn năm</option>
+                                <option value="">Năm 2020</option>
+                                <option value="">Năm 2019</option>
+                                <option value="">Năm 2018</option>
+                                <option value="">Năm 2017</option>
+                            </select>
+                            <select class="form-control input-sm">
+                                <option value="">Chọn tháng</option>
+                                <option value="">Tháng 1</option>
+                                <option value="">Tháng 2</option>
+                                <option value="">Tháng 3</option>
+                                <option value="">Tháng 4</option>
+                                <option value="">Tháng 5</option>
+                                <option value="">Tháng 6</option>
+                                <option value="">Tháng 7</option>
+                                <option value="">Tháng 8</option>
+                                <option value="">Tháng 9</option>
+                                <option value="">Tháng 10</option>
+                                <option value="">Tháng 11</option>
+                                <option value="">Tháng 12</option>
+                            </select>
+                            <button type="button" class="btn btn-xs btn-default bt-custom visible-xs pull-right">
+                                <span class="glyphicon glyphicon-search"></span>
+                                Tìm kiếm
+                            </button>
+                            <button type="button" class="btn btn-sm btn-default bt-custom visible-sm pull-right">
+                                <span class="glyphicon glyphicon-search"></span>
+                                Tìm kiếm
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Article section -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <a href="https://www.ueh.edu.vn/su-kien/chao-mung-nguyen-thu-tuong-han-quoc-den-ueh-va-ra-mat-chuong-trinh-quan-tri-cap-cao-toan-cau-viet-nam-han-quoc_55421"><img src="https://www.ueh.edu.vn/images/upload/editer/LCD_800.png" class="img-responsive hvr-grow"></a>
+                    <h3 class="title text-justify visible-lg visible-md"><a href="https://www.ueh.edu.vn/su-kien/chao-mung-nguyen-thu-tuong-han-quoc-den-ueh-va-ra-mat-chuong-trinh-quan-tri-cap-cao-toan-cau-viet-nam-han-quoc_55421">Chào mừng nguyên Thủ tướng Hàn Quốc đến UEH và Ra mắt chương trình Quản trị cấp cao toàn cầu Việt Nam - Hàn Quốc</a></h3>
+                    <h4 class="title text-justify visible-sm"><a href="https://www.ueh.edu.vn/su-kien/chao-mung-nguyen-thu-tuong-han-quoc-den-ueh-va-ra-mat-chuong-trinh-quan-tri-cap-cao-toan-cau-viet-nam-han-quoc_55421">Chào mừng nguyên Thủ tướng Hàn Quốc đến UEH và Ra mắt chương trình Quản trị cấp cao toàn cầu Việt Nam - Hàn Quốc</a></h4>
+                    <h6 class="title text-justify visible-xs"><a href="https://www.ueh.edu.vn/su-kien/chao-mung-nguyen-thu-tuong-han-quoc-den-ueh-va-ra-mat-chuong-trinh-quan-tri-cap-cao-toan-cau-viet-nam-han-quoc_55421">Chào mừng nguyên Thủ tướng Hàn Quốc đến UEH và Ra mắt chương trình Quản trị cấp cao toàn cầu Việt Nam - Hàn Quốc</a></h6>
+                    <hr style="border-bottom: 1px solid #000000; width: 30%; display: inline-block; opacity: 0.3;" class="first-hr">
+                    <p class="text-justify">Con đường phát triển kinh tế tại Việt Nam hiện nay được các chuyên gia kinh tế thế giới đánh giá là khá tương đồng với sự phát triển của nền kinh tế tại Hàn Quốc trong những năm bắt đầu chuyển mình thành 1 trong 4 nền kinh tế lớn nhất Châu Á với hàng loạt doanh nghiệp vươn ra khỏi đất nước và trở thành thương hiệu toàn cầu cho đến hôm nay. Họ dự đoán về 1 “Kỳ tích sông Hán” thứ 2 sẽ xuất hiện tại Việt Nam trong thời gian sắp tới.</p>
+                    <p><small>29 tháng 2 năm 2020</small></p>
+                    <hr style="border-bottom: 1px solid #000000; opacity: 0.6;">
+                </article>
+                <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="true">
+                    <a href="https://www.ueh.edu.vn/su-kien/hoi-thao-nen-hay-khong-nen-hoc-mba-khi-vua-tot-nghiep-dai-hoc_55426"><img src="https://www.ueh.edu.vn/images/upload/editer/WebUeh-HT-CoNenHocMBA-T11-1973x972%20(1).png" class="img-responsive hvr-grow"></a>
+                    <h3 class="title text-justify visible-lg visible-md"><a href="https://www.ueh.edu.vn/su-kien/hoi-thao-nen-hay-khong-nen-hoc-mba-khi-vua-tot-nghiep-dai-hoc_55426">Hội thảo Nên hay không nên học MBA khi vừa tốt nghiệp đại học</a></h3>
+                    <h4 class="title text-justify visible-sm"><a href="https://www.ueh.edu.vn/su-kien/hoi-thao-nen-hay-khong-nen-hoc-mba-khi-vua-tot-nghiep-dai-hoc_55426">Hội thảo Nên hay không nên học MBA khi vừa tốt nghiệp đại học</a></h4>
+                    <h6 class="title text-justify visible-xs"><a href="https://www.ueh.edu.vn/su-kien/hoi-thao-nen-hay-khong-nen-hoc-mba-khi-vua-tot-nghiep-dai-hoc_55426">Hội thảo Nên hay không nên học MBA khi vừa tốt nghiệp đại học</a></h6>
+                    <hr style="border-bottom: 1px solid #000000; width: 30%; display: inline-block; opacity: 0.3;" class="first-hr">
+                    <p class="text-justify">Ngày nay, nhiều bạn trẻ lo ngại việc du học Thạc sĩ kinh doanh (MBA) khi vừa tốt nghiệp Đại học là sẽ mất đi cơ hội nghề nghiệp hiện tại và khi trở về, du học sinh lại phải bắt đầu như bao sinh viên mới ra trường khác.</p>
+                    <p><small>23 tháng 11 năm 2019</small></p>
+                </article>
+            </div>
+            <!-- Latest News Section -->
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-out" data-aos-once="true">
+                <div class="latestnews-decoration"></div>
+                <div class="latestnews-title">
+                    <h3 class="title visible-lg">SỰ KIỆN SẮP DIỄN RA TẠI UEH</h3>
+                    <h4 class="title visible-sm visible-md">SỰ KIỆN SẮP DIỄN RA TẠI UEH</h4>
+                    <h5 class="title visible-xs">SỰ KIỆN SẮP DIỄN RA TẠI UEH</h5>
+                </div>
+                <!-- Latest News -->
+                <div class="latestnews-timeevent">
+                    <div class="latestnews-indicators pull-left"></div>
+                    <p class="latestnews-timestamp title">Đăng 33 phút trước</p>
+                </div>
+                <div class="latestnews-feed">
+                    <h4 class="title visible-lg"><a href="https://www.ueh.edu.vn/su-kien/the-3rd-asia-conference-on-business-and-economic-studies-acbes-2020_55447">The 3rd Asia Conference on Business and Economic Studies (ACBES 2020)</a></h4>
+                    <h5 class="title visible-sm visible-md"><a href="https://www.ueh.edu.vn/su-kien/the-3rd-asia-conference-on-business-and-economic-studies-acbes-2020_55447">The 3rd Asia Conference on Business and Economic Studies (ACBES 2020)</a></h5>
+                    <h6 class="title visible-xs"><a href="https://www.ueh.edu.vn/su-kien/the-3rd-asia-conference-on-business-and-economic-studies-acbes-2020_55447">The 3rd Asia Conference on Business and Economic Studies (ACBES 2020)</a></h6>
+                    <p><small>21/08/2020 - 22/08/2020</small></p>
+                </div>
+                <hr style="margin: 1em 0;">
+                <!-- Latest News -->
+                <div class="latestnews-timeevent">
+                    <div class="latestnews-indicators pull-left"></div>
+                    <p class="latestnews-timestamp title">6 tiếng trước</p>
+                </div>
+                <div class="latestnews-feed">
+                    <h4 class="title visible-lg"><a href="https://www.ueh.edu.vn/su-kien/the-3rd-asia-conference-on-business-and-economic-studies-acbes-2020_55447">The 3rd Asia Conference on Business and Economic Studies (ACBES 2020)</a></h4>
+                    <h5 class="title visible-sm visible-md"><a href="https://www.ueh.edu.vn/su-kien/the-3rd-asia-conference-on-business-and-economic-studies-acbes-2020_55447">The 3rd Asia Conference on Business and Economic Studies (ACBES 2020)</a></h5>
+                    <h6 class="title visible-xs"><a href="https://www.ueh.edu.vn/su-kien/the-3rd-asia-conference-on-business-and-economic-studies-acbes-2020_55447">The 3rd Asia Conference on Business and Economic Studies (ACBES 2020)</a></h6>
+                    <p><small>21/08/2020 - 22/08/2020</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <ul class="my-pagination list-unstyled">
+                <li class="choosen"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" class="title">Next</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+@section PageScript{
+    @Scripts.Render("~/assets/plugins/aos/aos.js")
+    @Scripts.Render("~/assets/js/sukien/page-setup.js")
+    <script>
+        AOS.init();
+    </script>
+}

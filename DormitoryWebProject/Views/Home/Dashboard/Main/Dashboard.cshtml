@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+@section PageStyle{
+    <!-- Google Font: Source Sans Pro  -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="~/assets/plugins/fullcalendar/main.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/fullcalendar-daygrid/main.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/fullcalendar-timegrid/main.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/fullcalendar-bootstrap/main.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="~/assets/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/assets/plugins/toastr/toastr.min.css">
+    <!-- jsGrid -->
+    <link rel="stylesheet" href="~/assets/plugins/jsgrid/jsgrid.min.css">
+    <link rel="stylesheet" href="~/assets/plugins/jsgrid/jsgrid-theme.min.css">
+    <!-- Page CSS -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/dashboard/general.css">
+}
+
+<!-- Content Wrapper. Contains page content  -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header)  -->
+    <section class="content-header">
+    </section>
+    <!-- Main content  -->
+    <section class="content">
+        <div class="row">
+            <div class="container-fluid">
+                @Html.Partial("_ThongtinchungPartial")
+                @Html.Partial("_ThongkePartial")
+                @Html.Partial("_Thongtinphong")
+                @Html.Partial("_Lichsukien")
+            </div>
+        </div>
+    </section>
+</div>
+@Html.Partial("_ThongtinchungPhanquyen")
+@Html.Partial("_ThongtinchungBaocaoloi")
+@Html.Partial("_ThongtinchungThongtinlog")
+
+@section PageScript{
+    <!-- jQuery UI -->
+    <script src="~/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Select2 -->
+    <script src="~/assets/plugins/select2/js/select2.full.min.js"></script>
+    <!-- Bootstrap4 Duallistbox -->
+    <script src="~/assets/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+    <!-- fullCalendar 2.2.5 -->
+    <script src="~/assets/plugins/moment/moment.min.js"></script>
+    <script src="~/assets/plugins/fullcalendar/main.min.js"></script>
+    <script src="~/assets/plugins/fullcalendar-daygrid/main.min.js"></script>
+    <script src="~/assets/plugins/fullcalendar-timegrid/main.min.js"></script>
+    <script src="~/assets/plugins/fullcalendar-interaction/main.min.js"></script>
+    <script src="~/assets/plugins/fullcalendar-bootstrap/main.min.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="~/assets/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <!-- Toastr -->
+    <script src="~/assets/plugins/toastr/toastr.min.js"></script>
+    <!-- jsGrid -->
+    <script src="~/assets/plugins/jsgrid/demos/db.js"></script>
+    <script src="~/assets/plugins/jsgrid/jsgrid.min.js"></script>
+    <!-- Page js  -->
+    <script src="~/assets/js/dashboard/general.js"></script>
+}

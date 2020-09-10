@@ -1,0 +1,62 @@
+﻿@model DormitoryWebProject.Models.Poster
+
+@{
+    ViewBag.Title = "Edit";
+    ViewBag.formheader = "";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@section PageScript{
+    <!-- Custom File Input -->
+    <script src="~/assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            bsCustomFileInput.init();
+        });
+    </script>
+}
+@using (Html.BeginForm("Edit", "Poster", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="card card-dark">
+        <div class="card-header">
+            <h3 class="card-title" style="font-weight:700">Chỉnh sửa Poster</h3>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.MaPoster)
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.Caption, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <textarea id="Caption" name="Caption" rows="3" class="col-md-12" placeholder="">@Model.Caption</textarea>
+                            @Html.ValidationMessageFor(model => model.Caption, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload" name="pictureUpload">
+                                <label class="custom-file-label" for="pictureUpload">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="/Poster" class="btn btn-default bg-navy"><i class="ionicons ion-ios-undo-outline"></i> Trở về</a>
+            <button type="submit" class="btn btn-default bg-teal float-right" name="Save" value="Save"><i class="fa fa-check"></i> <span>Lưu</span></button>
+        </div>
+    </div>
+}
+
+
+
+
+
+

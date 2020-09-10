@@ -1,0 +1,106 @@
+﻿@model DormitoryWebProject.Models.Phong
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Phong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KTX.TenKTX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KTX.TenKTX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loai.TenLoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loai.TenLoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tang.Ten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tang.Ten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenPhong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenPhong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TongSoGiuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TongSoGiuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoSoVatChat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoSoVatChat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.picturePath5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.picturePath5)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhong }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

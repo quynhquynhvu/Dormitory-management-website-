@@ -1,0 +1,63 @@
+
+
+.breadcrumb {
+    background-color: white;
+}
+
+/*chỉnh css sidebar*/
+#sidebar_bar {
+    padding-top: 0.15em;
+    margin-top: 0.2em;
+}
+        #breadcrumb_fix {
+          font-size: 1.1em;
+          margin-top: 0.2em;
+         
+        }
+        #breadcrumb_fix span{
+        	 color: #004c56;
+        }
+        #sidebar-color{
+            background: #004c56;
+        }
+        #_anhome{
+            display: none;
+        }
+        .info{
+            padding: 1em;
+        }
+        #hinhlogo img{
+            width:0.3em;
+        }
+        @media (max-width: 768px) {
+        #formsearch {
+         display: none;
+        }
+        /*ẩn breadcrumb hoạt động, là các li trên menu
+        đặt id là tên như dưới đây đối với các breadcrumb*/
+
+        #breadcrumb_fix{
+            display: none;
+        }
+        #sidebar_bar{
+            margin-top: -0.2em;
+        }
+        #_anhome{
+            display: block;
+        }
+    }
+
+
+/*form search trên thanh nav*/
+#formsearch input[type=search] {
+  width: 5px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  background-color: inherit;
+}
+
+/* When the input field gets focus, change its width to 100% */
+#formsearch input[type=search]:focus {
+  width: 100%;
+  background-color: #FFFF00;
+}

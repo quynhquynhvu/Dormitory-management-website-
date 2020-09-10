@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "CMS";
+}
+@section PageStyle{
+    <link href="~/assets/css/CMS/Index.css" rel="stylesheet" />
+}
+<div class="content-wrapper">
+    <section class="content-header">
+        <h2>Content Management System</h2>
+    </section>
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Đến trang quản lý dữ liệu Dormitory Poster -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","Poster")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="ionicons ion-easel"></i></span>
+                            <span class="info-box-text">Dormitory Poster</span>
+                            <span class="info-box-text"><small>Quản lý nội dung Poster trên trang chủ KTX</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu chi tiết KTX -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","ChiTietKTX")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="ionicons ion-compose"></i></span>
+                            <span class="info-box-text">Nội dung chi tiết KTX</span>
+                            <span class="info-box-text"><small>Quản lý nội dung, hình ảnh KTX trên trang chủ KTX</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu khóa học -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","KhoaHoc")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="ionicons ion-university"></i></span>
+                            <span class="info-box-text">Khóa học</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu khóa học</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu nhận xét từ khách hàng -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","NhanXetKhachHang")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="ionicons ion-chatbox-working"></i></span>
+                            <span class="info-box-text">Nhận xét từ khách hàng</span>
+                            <span class="info-box-text"><small>Quản lý nội dung nhận xét từ khách hàng</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu KTX -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","KTX")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="fa fa-hotel"></i></span>
+                            <span class="info-box-text">Ký túc xá</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu kí túc xá</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu Khoa -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","Khoa")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="fa fa-university"></i></span>
+                            <span class="info-box-text">Khoa viện</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu khoa viện</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu Lớp -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","Lop")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="fa fa-university"></i></span>
+                            <span class="info-box-text">Lớp</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu mã lớp</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu Chức vụ trong phòng -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","ChucVu")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="fas fa-user-md"></i></span>
+                            <span class="info-box-text">Chức vụ</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu mã chức vụ</small></span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Đến trang quản lý dữ liệu Tầng của KTX -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","Tang")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="fa fa-hotel"></i></span>
+                            <span class="info-box-text">Tầng</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu mã tầng</small></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Đến trang quản lý dữ liệu Loại phòng -->
+                <div class="col-sm-12 col-md-4 col-lg-4 col-xl-3 box-custom">
+                    <a class="info-box my-info-box" href="@Url.Action("Index","Loai")">
+                        <div class="info-box-content">
+                            <span class="info-box-text"><i class="fa fa-hotel"></i></span>
+                            <span class="info-box-text">Loại phòng</span>
+                            <span class="info-box-text"><small>Quản lý dữ liệu mã loại phòng</small></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+

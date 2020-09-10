@@ -1,0 +1,353 @@
+﻿
+@{
+    ViewBag.Title = "Thêm nhóm người dùng";
+}
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Thêm nhóm người dùng</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- textarea -->
+                                <div class="form-group">
+                                    <label for="inputID">Tên nhóm</label>
+                                    <input type="text" id="inputName" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputID">Mô tả</label>
+                                    <input type="text" id="inputName" class="form-control" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputName">IP</label>
+                                    <input type="text" id="inputName" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputStatus">Lịch truy cập</label>
+                                    <select class="form-control custom-select">
+                                        <option selected disabled>Select one</option>
+                                        <option>L1</option>
+                                        <option>L2</option>
+                                        <option selected>L3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- textarea -->
+                                <div class="form-group">
+                                    <label for="inputID">Mật khẩu</label>
+                                    <input type="text" id="inputName" class="form-control" value="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="inputStatus">Cách xác thực</label>
+                                    <select class="form-control custom-select">
+                                        <option selected disabled>Select one</option>
+                                        <option>L1</option>
+                                        <option>L2</option>
+                                        <option selected>L3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header p-2">
+                                    <ul class="nav nav-pills">
+                                        <li class="nav-item"><a class="nav-link active" href="#function" data-toggle="tab">Quyền chức năng</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#database" data-toggle="tab">Quyền dữ liệu</a></li>
+                                    </ul>
+                                </div><!-- /.card-header -->
+                                <div class="card-body">
+                                    <div class="tab-content">
+                                        <div class="active tab-pane" id="function">
+                                            <!--Table-->
+                                            <table class="col-md-12 table table-bordered table-hover">
+                                                <thead align="center">
+                                                    <tr>
+                                                        <th>Function</th>
+                                                        <th>View</th>
+                                                        <th>Add</th>
+                                                        <th>Edit</th>
+                                                        <th>Delete</th>
+                                                        <th>Search</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Hệ thống
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Người dùng
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Sinh viên
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Khu/Phòng
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Hóa đơn
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Quản lý vật tư
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Yêu cầu sửa chữa
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Quản lý giặt ủi
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Báo cáo Thống kê
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+
+                                                </tbody>
+
+
+
+                                            </table>
+                                            <!-- /.Table -->
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane" id="database">
+                                            <!--Table-->
+                                            <table class="col-md-12 table table-bordered table-hover">
+                                                <thead align="center">
+                                                    <tr>
+                                                        <th>Function</th>
+                                                        <th>View</th>
+                                                        <th>Add</th>
+                                                        <th>Edit</th>
+                                                        <th>Delete</th>
+                                                        <th>Search</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Hệ thống
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Người dùng
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Sinh viên
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Khu/Phòng
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Hóa đơn
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Quản lý vật tư
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            </button>
+                                                            Yêu cầu sửa chữa
+                                                        </td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                        <td align="center"><input type="checkbox" name="yesno" value=""></td>
+                                                    </tr>
+
+                                                </tbody>
+
+
+
+                                            </table>
+                                            <!-- /.Table -->
+                                        </div>
+                                        <!-- /.tab-pane -->
+                                    </div>
+                                    <!-- /.tab-content -->
+                                </div><!-- /.card-body -->
+                            </div>
+                        </div><!-- /.nav-tabs-custom -->
+                        <div class="col-md-12">
+                            <a href="@Url.Action("Quanlynhomnguoidung","Home")" class="btn btn-secondary">Cancel</a>
+                            <input type="submit" value="Save" class="btn btn-success float-right">
+                        </div>
+                        <br />
+                    </form>
+
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <br />
+    </section>
+    <!-- /.content -->
+</div>
+

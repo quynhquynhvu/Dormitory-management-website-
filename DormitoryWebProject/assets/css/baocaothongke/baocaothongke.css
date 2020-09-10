@@ -1,0 +1,46 @@
+﻿@media only screen and (max-width: 768px) {
+    .table-specialresponsive > thead,
+    .table-specialresponsive > tbody,
+    .table-specialresponsive > tbody > tr,
+    .table-specialresponsive > thead > tr,
+    .table-specialresponsive > tfoot > tr,
+    .table-specialresponsive > tbody > tr > td,
+    .table-specialresponsive > thead > tr > td,
+    .table-specialresponsive > tfoot > tr > td,
+    .table-specialresponsive > tbody > tr > th,
+    .table-specialresponsive > thead > tr > th,
+    .table-specialresponsive > tfoot > tr > th {
+        display: block;
+    }
+
+    .table-specialresponsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table-specialresponsive tr {
+        border-top: 1px solid #ccc;
+    }
+
+    .table-specialresponsive > tbody > tr > td,
+    .table-specialresponsive > tfoot > tr > td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: left;
+    }
+
+        .table-specialresponsive > tbody > tr > td:before,
+        .table-specialresponsive > tfoot > tr > td:before {
+            position: absolute;
+            left: 6px;
+            width: 50%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+            content: attr(data-title);
+        }
+}

@@ -1,0 +1,138 @@
+
+
+/*Content Header (Page header) --*/
+/*chỉnh tên tiêu đề của content*/
+.content-header {
+    padding: 15px .6rem;
+}
+
+.text-sm .content-header {
+    padding: 10px .5rem;
+}
+
+.content-header h1 {
+    font-size: 1.6rem;
+    margin: 0 ;
+    color: #004c56;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.text-sm .content-header h1 {
+    font-size: 1.5rem
+}
+
+.content-header .breadcrumb {
+    background: 0 0;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+    padding: 0
+}
+
+.text-sm .content-header .breadcrumb {
+    line-height: 1.5rem
+}
+
+
+/*chỉnh ktx, tầng formgroup select-web-laptop*/
+.modal-body td, .modal-body th {
+    padding-top: 2em;
+}
+
+/*chỉnh sơ đồ*/
+.card-category {
+    text-align: right;
+}
+
+.card .card-category:not([class*="text-"]) {
+    color: #006400;
+}
+
+.card [class*="card-header-"] .card-category {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card .card-category-social .fa {
+    font-size: 24px;
+    position: relative;
+    margin-top: -4px;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.card .card-header .card-category {
+    margin: 0;
+}
+
+.card.card-plain .card-header.card-header-icon + .card-body .card-category {
+    margin-top: -20px;
+}
+
+.card .card-category .material-icons {
+    position: relative;
+    top: 8px;
+    line-height: 0;
+}
+/*chỉnh sơ đồ */
+.card-header p {
+    text-align: left;
+    font-size: 20px;
+    line-height: 2em;
+    color: #006400;
+}
+
+.card-name p {
+    padding-top: 0.5em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: -2em;
+    background: #228B22;
+    height: 3.1em;
+    width: 4.5em;
+    box-shadow: 5px 5px #006400;
+}
+
+.card-name a {
+    color: white;
+}
+
+.card-name p:hover {
+    background: #00FF00;
+}
+
+.card-name a:hover {
+    color: #FF4500;
+}
+
+#sdphong {
+    background-color: #00FF7F;
+    border-radius: 1em;
+    margin-top: 3em;
+}
+
+.card-footer > .progress {
+    height: 2em;
+    font-size: 15px;
+    border-radius: 1em;
+}
+
+#button-edit-save button {
+    background-color: inherit;
+}
+@media only screen and (min-width: 992px) and (max-width: 1190px) {
+    /*chỉnh sơ đồ */
+    .card-header p {
+        font-size: 15px;
+    }
+
+    .card-name p {
+        font-size: 19px;
+        width: 3.6em;
+    }
+
+    .card-footer > .progress {
+        height: 1.5em;
+        font-size: 14px;
+    }
+}

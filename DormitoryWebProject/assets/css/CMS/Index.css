@@ -1,0 +1,19 @@
+﻿body {
+}
+.content-wrapper {
+    font-weight: 700;
+}
+/* Chỉnh css cho nút điều hướng trong card */
+.info-box-text i {
+    font-size: 2rem
+}
+
+.my-info-box:hover {
+    color: #F4841A;
+    background-color: #004C56
+}
+
+.box-custom a {
+    text-decoration: none;
+    color: #222830
+}

@@ -1,0 +1,174 @@
+﻿@model DormitoryWebProject.Models.ChiTietKTX
+
+@{
+    ViewBag.Title = "Edit";
+    ViewBag.formheader = "";
+    Layout = "~/Views/Shared/Main/_LayoutFormCMS.cshtml";
+}
+@section PageStyle{
+    <!-- Stars rating -->
+    <link href="~/assets/plugins/bootstrap-star-rating/css/star-rating.min.css" media="all" rel="stylesheet" />
+    <!-- Ionrange Slider -->
+    <link href="~/assets/plugins/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet" />
+}
+@section PageScript {
+    <!-- Star rating JS -->
+    <script src="~/assets/plugins/bootstrap-star-rating/js/star-rating.min.js"></script>
+    <!-- Ionrange Slider -->
+    <script src="~/assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <!-- Custom File Input -->
+    <script src="~/assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                bsCustomFileInput.init();
+            });
+            $(".my-rating").rating();
+            $('.ion-slider').ionRangeSlider({
+                min: 0,
+                max: 10000000,
+                from: 1000,
+                type: 'single',
+                step: 50000,
+                prefix: '',
+                prettify: false,
+                hasGrid: true
+            })
+        });
+        $(".my-rating").rating({
+            starCaptions: function (val) {
+                if (val < 3.5) {
+                    return val + ' Stars';
+                }
+                else if (val >= 4.5) {
+                    return 'Brilliant'
+                }
+                else if (val >= 3.5) {
+                    return 'Awesome'
+                }
+            }
+        });
+    </script>
+}
+@using (Html.BeginForm("Edit", "ChiTietKTX", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="card card-dark">
+        <div class="card-header">
+            <h3 class="card-title" style="font-weight:700">Chỉnh sửa chi tiết @Model.KTX.TenKTX</h3>
+        </div>
+        <div class="card-body">
+            <div class="container">
+
+                @Html.AntiForgeryToken()
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.MaChiTietKTX)
+
+                    <div class="form-group row">
+                        <label for="ktxFK" class="control-label col-md-2">Kí túc xá</label>
+                        <div class="col-xl-4 col-md-6">
+                            @Html.DropDownList("MaKTX", null, htmlAttributes: new { @class = "form-control", disabled = true })
+                            @Html.ValidationMessageFor(model => model.MaKTX, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.Rated, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Rated, htmlAttributes: new { @class = "rating my-rating", data_min = 0, data_max = 5, data_step = 0.5, data_size = "xs" })
+                            @Html.ValidationMessageFor(model => model.Rated, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.GiaThueThapNhat, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-3" })
+                        <div class="col-md-6">
+                            <input class="ion-slider" id="GiaThueThapNhat" type="text" name="GiaThueThapNhat" value="" data-type="single"
+                                   data-step="50000" data-postfix=" &#8363;" data-from="@Model.GiaThueThapNhat" data-hasgrid="true">
+                            @Html.ValidationMessageFor(model => model.GiaThueThapNhat, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.GiaThueCaoNhat, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-3" })
+                        <div class="col-md-6">
+                            <input class="ion-slider" id="GiaThueCaoNhat" type="text" name="GiaThueCaoNhat" value="" data-type="single"
+                                   data-step="50000" data-postfix=" &#8363;" data-from="@Model.GiaThueCaoNhat" data-hasgrid="true">
+                            @Html.ValidationMessageFor(model => model.GiaThueCaoNhat, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.MoTaKTX, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <textarea id="MoTaKTX" name="MoTaKTX" rows="8" class="col-md-12" placeholder="">@Model.MoTaKTX</textarea>
+                            @Html.ValidationMessageFor(model => model.MoTaKTX, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload1, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload1" name="pictureUpload1">
+                                <label class="custom-file-label" for="pictureUpload1">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload1, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload2, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload2" name="pictureUpload2">
+                                <label class="custom-file-label" for="pictureUpload2">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload2, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload3, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload3" name="pictureUpload3">
+                                <label class="custom-file-label" for="pictureUpload3">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload3, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload4, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload4" name="pictureUpload4">
+                                <label class="custom-file-label" for="pictureUpload4">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload4, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        @Html.LabelFor(model => model.pictureUpload5, htmlAttributes: new { @class = "control-label col-lg-2 col-md-3 py-md-2" })
+                        <div class="col-md-6">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="pictureUpload5" name="pictureUpload5">
+                                <label class="custom-file-label" for="pictureUpload5">Chọn tệp từ máy tính</label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.pictureUpload5, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer">
+            <a href="/ChiTietKTX" class="btn btn-default bg-navy"><i class="ionicons ion-ios-undo-outline"></i> Trở về</a>
+            <button type="submit" class="btn btn-default bg-teal float-right" name="Save" value="Save"><i class="fa fa-check"></i> <span>Lưu</span></button>
+        </div>
+    </div>
+}
+
+
+

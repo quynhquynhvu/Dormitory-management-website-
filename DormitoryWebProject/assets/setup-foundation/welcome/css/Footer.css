@@ -1,0 +1,73 @@
+footer{
+	background-color: #ECBD8B;
+	padding-top: 2em;
+	padding-bottom: 0.5em;
+	color: #004C56;
+	width: 100%;
+}
+.my-footer .title{
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+.my-footer p{
+	font-weight: normal;
+}
+.f-img-custom{
+	margin-bottom: 1em;
+}
+.my-footer .social-links a{
+	margin: 0.4em;
+}
+/* Responsive Design */
+
+/* Extremely small Device */
+@media (min-width: 320px) { 
+	.my-footer p {
+		font-size: 9px;
+	}
+	#facebook-icon, #Twitter-icon, #instagram-icon{
+		height: 12px;
+		width: auto;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.my-footer p{
+		font-size: 14px;
+	}
+	#facebook-icon, #Twitter-icon, #instagram-icon{
+		height: 16px;
+		width: auto;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.my-footer p{
+		font-size: 18px;
+	}
+	#facebook-icon, #Twitter-icon, #instagram-icon{
+		height: 32px;
+		width: auto;
+	}
+	.my-footer .social-links a{
+		margin: 0.4em;
+		margin-top: 1em;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	.my-footer p{
+		font-size: 12px;
+	}
+}
+/*Extremely Large devices (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+
+}
+/*4K Screen devices (large desktops, 1440px and up) */
+@media (min-width: 2500px) { 
+
+}

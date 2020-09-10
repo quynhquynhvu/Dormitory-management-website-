@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "Liên Hệ";
+    Layout = "~/Views/Shared/Main/_LayoutWelcome.cshtml";
+}
+@section PageStyle{
+    @Styles.Render("~/assets/css/lienhe/General.css")
+}
+<!-- Breadcrumb section -->
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index","Trangchu")">TRANG CHỦ</a></li>
+    <li class="active">LIÊN HỆ</li>
+</ol>
+
+<!-- Main Section -->
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="visible-lg title">TRUNG TÂM HỖ TRỢ SINH VIÊN</h2>
+        <h3 class="visible-md title">TRUNG TÂM HỖ TRỢ SINH VIÊN</h3>
+        <h4 class="visible-sm title">TRUNG TÂM HỖ TRỢ SINH VIÊN</h4>
+        <h5 class="visible-xs title">TRUNG TÂM HỖ TRỢ SINH VIÊN</h5>
+    </div>
+    <div class="row">
+        <!-- Col 1 -->
+        <div class="col-lg-4 col-md-5 col-sm-10 col-xs-10 col-custom" id="first-col">
+            <!-- row 1 -->
+            <div class="row">
+                <img src="~/assets/images/st-assistant.png" alt="Student Assistant Logo" class="img-responsive col-lg-12 col-md-12 col-sm-10 col-xs-10">
+            </div>
+            <!-- row 2 -->
+            <div class="row">
+                <h3 class="visible-md visible-lg title visible-sm">VĂN PHÒNG TRUNG TÂM</h3>
+                <h6 class="visible-xs title">VĂN PHÒNG TRUNG TÂM</h6>
+                <p>
+                    Địa chỉ: B.015 – 279 Nguyễn Tri Phương – P.5 – Q.10 - TP.HCM <br>
+                    Điện thoại: (+84) 8 3855.1777 <br>
+                    Fax: (+84) 8 39.574.695 <br>
+                    Email:  trungtamhotrosinhvien@ueh.edu.vn <br>
+                    Website: <a href="http://tthtsv.ueh.edu.vn/">www.tthtsv.ueh.edu.vn</a>
+                </p>
+            </div>
+        </div>
+        <!-- Col 2 -->
+        <div class="col-lg-4 col-md-5 col-sm-10 col-xs-10 col-custom" id="second-col">
+            <!-- Row 1 -->
+            <div class="row">
+                <img src="~/assets/images/st-assistant.png" alt="Student Assistant Logo" class="img-responsive col-lg-12 col-md-12 col-sm-10 col-xs-10">
+            </div>
+            <!-- row 2 -->
+            <div class="row">
+                <h3 class="visible-md visible-lg visible-sm title">BỘ PHẬN HỖ TRỢ SINH VIÊN</h3>
+                <h6 class="visible-xs title">BỘ PHẬN HỖ TRỢ SINH VIÊN</h6>
+                <p>
+                    Địa chỉ: B.014 – 279 Nguyễn Tri Phương – P.5 – Q.10 – TP.HCM <br>
+                    Điện thoại: (+84) 8 3855.1777
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section PageScript{
+    @Scripts.Render("~/assets/js/lienhe/page-setup.js")
+}

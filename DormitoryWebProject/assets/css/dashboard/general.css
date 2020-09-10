@@ -1,0 +1,84 @@
+.info{padding: 1em; } 
+
+.title{font-weight: bold; font-family: Helvetica, Arial, sans-serif !important}
+p{margin: 0.3rem;}
+
+/* Chỉnh css cho card thông tin hệ thống */
+.my-card-title{color: #004C56}
+.my-card{font-family: Helvetica,Arial;}
+.my-card h5, h6, p, small{margin-bottom: 0}
+.my-card h5{font-size: 18px}
+.my-card small{font-size: 12px;}
+
+/* Chỉnh css cho nút điều hướng trong card */
+.info-box-text i{font-size: 2rem}
+.my-info-box:hover{color: #F4841A; background-color: #004C56}
+.box-custom a{text-decoration: none; color: #222830}
+/* Resposive design */
+/* Extremely small Device */
+@media (min-width: 320px) { 
+    /* Ultilities Class */
+    .f-size-resp{font-size: 9px}
+    .f-title-resp{font-size: 12px}
+    .ml-auto{margin-left: 0 !important}
+    .offset-l1, .offset-l2 {
+        border-top: 1px solid rgba(0,0,0,.1);
+        padding-top:1em;
+    }
+    .title {font-size: 14px !important}
+    .info-box{font-size: 10px;}
+    .card-body{padding: 10px}
+    .card-body p{font-size: 10px}
+    .info-box-text{margin-top: 0.4rem; font-size: 12px; font-weight: bold;}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    /* Ultilities Class */
+    .f-size-resp{font-size: 10px}
+    .title {font-size: 18px !important}
+    .info-box{font-size: 12px;}
+    .card-body{padding: 15px}
+    .card-body p{font-size: 12px}
+    .info-box-text{margin-top: 0.4rem; font-size: 12px; font-weight: bold;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    /* Ultilities Class */
+    .f-size-resp{font-size: 12px}
+    .ml-auto{
+        margin-left: auto !important;
+    }
+    .offset-l1, .offset-l2{
+        border-left: 1px solid rgba(0,0,0,.1);
+    }
+    .title {font-size: 20px !important}
+    .info-box{font-size: 14px;}
+    .card-body{padding: 20px}
+    .card-body p{font-size: 14px}
+    .info-box-text{margin-top: 0.4rem; font-size: 14px; font-weight: bold;}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    /* Ultilities Class */
+    .f-size-resp{font-size: 14px}
+
+}
+/*Extremely Large devices (large desktops, 1440px and up) */
+@media (min-width: 1440px) {
+    /* Ultilities Class */
+    .f-size-resp{font-size: 14px}
+}
+/*4K Screen devices (large desktops, 1440px and up) */
+@media (min-width: 2500px) { 
+    /* Ultilities Class */
+    .f-size-resp{font-size: 18px}
+}
+
+@media  (min-width: 768px) and (max-width: 992px){
+
+}
+
+@media  (min-width: 992px) and (max-width: 1200px){
+}
